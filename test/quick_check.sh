@@ -17,7 +17,8 @@ echo -e "${BLUE}========================================${NC}"
 echo ""
 
 # 检查导航系统是否运行
-if ! pgrep -f "nav2_container\|point_lio\|gazebo" > /dev/null; then
+if ! pgrep -f "component_container_isolated" > /dev/null && \
+   ! pgrep -f "pointlio_mapping" > /dev/null; then
     echo -e "${YELLOW}⚠ 导航系统未运行${NC}"
     echo ""
     echo "请先启动导航系统："
@@ -41,7 +42,7 @@ echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━�
 echo -e "${YELLOW}📊 进程统计${NC}"
 echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 
-nav2_container=$(pgrep -f "nav2_container" | wc -l)
+nav2_container=$(pgrep -f "component_container" | wc -l)
 point_lio=$(pgrep -f "pointlio_mapping" | wc -l)
 terrain=$(pgrep -f "terrain" | wc -l)
 joy=$(pgrep -f "joy" | wc -l)
@@ -95,8 +96,9 @@ printf "%-25s %7.1f%% %8s %9.1f\n" "总计" "$total_cpu" "-" "$total_mem"
 echo ""
 
 # Source ROS2环境
-if [ -f "./install/setup.bash" ]; then
-    source ./install/setup.bash 2>/dev/null
+WORKSPACE_ROOT=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
+if [ -f "$WORKSPACE_ROOT/install/setup.bash" ]; then
+    source "$WORKSPACE_ROOT/install/setup.bash" 2>/dev/null
     
     # ROS2节点检查
     echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"

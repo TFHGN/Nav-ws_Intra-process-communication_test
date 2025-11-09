@@ -20,8 +20,11 @@ TEST_DURATION=30  # 测试持续时间（秒）
 SAMPLE_INTERVAL=1 # 采样间隔（秒）
 NAMESPACE="red_standard_robot1"
 
+# 获取工作空间根目录
+WORKSPACE_ROOT=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
+
 # 输出目录
-OUTPUT_DIR="performance_test_results_$(date +%Y%m%d_%H%M%S)"
+OUTPUT_DIR="$WORKSPACE_ROOT/test/performance_test_results_$(date +%Y%m%d_%H%M%S)"
 mkdir -p "$OUTPUT_DIR"
 
 echo -e "${BLUE}========================================${NC}"
@@ -40,12 +43,15 @@ check_ros_environment() {
         exit 1
     fi
     
+    # 找到工作空间根目录
+    WORKSPACE_ROOT=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
+    
     # Source环境
-    if [ -f "./install/setup.bash" ]; then
-        source ./install/setup.bash
+    if [ -f "$WORKSPACE_ROOT/install/setup.bash" ]; then
+        source "$WORKSPACE_ROOT/install/setup.bash"
         echo -e "${GREEN}✓ ROS2环境已加载${NC}"
     else
-        echo -e "${RED}错误: 未找到 ./install/setup.bash${NC}"
+        echo -e "${RED}错误: 未找到 $WORKSPACE_ROOT/install/setup.bash${NC}"
         exit 1
     fi
     echo ""

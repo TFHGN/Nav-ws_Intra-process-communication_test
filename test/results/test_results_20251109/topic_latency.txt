@@ -1,0 +1,19 @@
+话题延迟测试结果:
+=====================
+
+测试话题: /red_standard_robot1/cloud_registered
+average rate: 1.772
+	min: 0.384s max: 0.802s std dev: 0.15174s window: 4
+
+测试话题: /red_standard_robot1/terrain_map
+average rate: 1.673
+	min: 0.411s max: 0.881s std dev: 0.17421s window: 4
+
+测试话题: /red_standard_robot1/terrain_map_ext
+average rate: 1.305
+	min: 0.470s max: 0.950s std dev: 0.21153s window: 3
+
+测试话题: /red_standard_robot1/cmd_vel
+
+测试话题: /red_standard_robot1/odom
+  话题不存在

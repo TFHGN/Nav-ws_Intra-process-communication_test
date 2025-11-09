@@ -1,0 +1,16 @@
+/red_standard_robot1/nav2_container
+  1  /red_standard_robot1/map_server
+  2  /red_standard_robot1/loam_interface
+  3  /red_standard_robot1/buaa_sentry_relocalization
+  4  /red_standard_robot1/sensor_scan_generation
+  5  /red_standard_robot1/lifecycle_manager_localization
+  6  /red_standard_robot1/fake_vel_transform
+  7  /red_standard_robot1/controller_server
+  8  /red_standard_robot1/smoother_server
+  9  /red_standard_robot1/planner_server
+  10  /red_standard_robot1/behavior_server
+  11  /red_standard_robot1/bt_navigator
+  12  /red_standard_robot1/waypoint_follower
+  13  /red_standard_robot1/velocity_smoother
+  14  /red_standard_robot1/lifecycle_manager_navigation
+Composable容器内容:
