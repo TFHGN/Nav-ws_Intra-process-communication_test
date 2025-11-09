@@ -22,4 +22,10 @@ src/BehaviorTree.ROS2/
 
 src/joint_state_publisher/
 
+<<<<<<< HEAD
 README_old.pdf
+=======
+README_old.pdf
+
+md/
+>>>>>>> 9299b4f (nav2)
