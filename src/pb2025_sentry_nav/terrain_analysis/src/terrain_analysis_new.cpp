@@ -131,6 +131,16 @@ TerrainAnalysisNode::TerrainAnalysisNode(const rclcpp::NodeOptions &options)
     terrainVoxelCloud[i].reset(new pcl::PointCloud<pcl::PointXYZI>());
   }
 
+  std::fill(std::begin(terrainVoxelUpdateNum), std::end(terrainVoxelUpdateNum), 0);
+  std::fill(std::begin(terrainVoxelUpdateTime), std::end(terrainVoxelUpdateTime), 0.0f);
+  std::fill(std::begin(planarVoxelElev), std::end(planarVoxelElev), 0.0f);
+  std::fill(std::begin(planarVoxelEdge), std::end(planarVoxelEdge), 0);
+  std::fill(std::begin(planarVoxelDyObs), std::end(planarVoxelDyObs), 0);
+  for (auto &elev_vec : planarPointElev)
+  {
+    elev_vec.clear();
+  }
+
   // Configure voxel grid filter
   downSizeFilter.setLeafSize(scan_voxel_size_, scan_voxel_size_, scan_voxel_size_);
 
