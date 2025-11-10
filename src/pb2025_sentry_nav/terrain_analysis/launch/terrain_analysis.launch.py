@@ -7,13 +7,11 @@ Terrain Analysis Launch File (Python Version)
 2. 可组合节点模式 (Composable Node)
 """
 
-import os
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, OpaqueFunction
 from launch.substitutions import LaunchConfiguration
-from launch_ros.actions import Node, ComposableNodeContainer, LoadComposableNodes
+from launch_ros.actions import ComposableNodeContainer, LoadComposableNodes
 from launch_ros.descriptions import ComposableNode
-from ament_index_python.packages import get_package_share_directory
 
 
 def generate_launch_description():

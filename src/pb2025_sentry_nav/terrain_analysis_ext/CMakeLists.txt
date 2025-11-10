@@ -30,10 +30,19 @@ find_package(tf2 REQUIRED)
 find_package(message_filters REQUIRED)
 find_package(pcl_conversions REQUIRED)
 find_package(pcl_ros REQUIRED)
+find_package(rclcpp_components REQUIRED)
 
-add_executable(terrainAnalysisExt src/terrainAnalysisExt.cpp)
-ament_target_dependencies(
-  terrainAnalysisExt
+add_library(${PROJECT_NAME} SHARED
+  src/terrain_analysis_ext_new.cpp
+)
+
+target_include_directories(${PROJECT_NAME}
+  PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:include/${PROJECT_NAME}>
+)
+
+ament_target_dependencies(${PROJECT_NAME}
   rclcpp
   std_msgs
   sensor_msgs
@@ -44,11 +53,27 @@ ament_target_dependencies(
   tf2_geometry_msgs
   message_filters
   pcl_ros
-  pcl_conversions)
+  pcl_conversions
+  rclcpp_components)
 
-install(TARGETS terrainAnalysisExt DESTINATION lib/${PROJECT_NAME})
+rclcpp_components_register_node(${PROJECT_NAME}
+  PLUGIN "terrain_analysis::TerrainAnalysisExtNode"
+  EXECUTABLE terrain_analysis_ext_node
+)
 
+install(TARGETS ${PROJECT_NAME}
+  EXPORT export_${PROJECT_NAME}
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION bin
+  INCLUDES DESTINATION include
+)
+
+install(DIRECTORY include DESTINATION share/${PROJECT_NAME})
 install(DIRECTORY launch DESTINATION share/${PROJECT_NAME})
+
+ament_export_targets(export_${PROJECT_NAME})
+ament_export_include_directories(include)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
