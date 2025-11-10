@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Terrain Analysis: terrain_analysis 命名空间参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Terrain Analysis
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">基于点云的实时地形分析与可通行性评估节点</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">terrain_analysis 命名空间参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>地形分析命名空间  
+<a href="namespaceterrain__analysis.html#details">更多...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html">TerrainAnalysisNode</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">地形分析节点类 - 用于实时地形评估和可通行性分析  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a89b276cf1a734e9f48c1f19486dff9c9"><td class="memItemLeft" align="right" valign="top">TerrainAnalysisNode::void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceterrain__analysis.html#a89b276cf1a734e9f48c1f19486dff9c9">odometryHandler</a> (const nav_msgs::msg::Odometry::ConstSharedPtr odom)</td></tr>
+<tr class="separator:a89b276cf1a734e9f48c1f19486dff9c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d5d0b3a8160b0c2268cfcf5421b268a"><td class="memItemLeft" align="right" valign="top">TerrainAnalysisNode::void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceterrain__analysis.html#a4d5d0b3a8160b0c2268cfcf5421b268a">laserCloudHandler</a> (const sensor_msgs::msg::PointCloud2::ConstSharedPtr laserCloud2)</td></tr>
+<tr class="separator:a4d5d0b3a8160b0c2268cfcf5421b268a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae50a30934a2002398ac210f237495781"><td class="memItemLeft" align="right" valign="top">TerrainAnalysisNode::void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceterrain__analysis.html#ae50a30934a2002398ac210f237495781">joystickHandler</a> (const sensor_msgs::msg::Joy::ConstSharedPtr joy)</td></tr>
+<tr class="separator:ae50a30934a2002398ac210f237495781"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ad7fc761f5735a4d44d085359efb6a5"><td class="memItemLeft" align="right" valign="top">TerrainAnalysisNode::void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceterrain__analysis.html#a5ad7fc761f5735a4d44d085359efb6a5">clearingHandler</a> (const std_msgs::msg::Float32::ConstSharedPtr dis)</td></tr>
+<tr class="separator:a5ad7fc761f5735a4d44d085359efb6a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a830eb87e32d30de42fc13fb58293ffc6"><td class="memItemLeft" align="right" valign="top">TerrainAnalysisNode::void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceterrain__analysis.html#a830eb87e32d30de42fc13fb58293ffc6">timerCallback</a> ()</td></tr>
+<tr class="separator:a830eb87e32d30de42fc13fb58293ffc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>地形分析命名空间 </p>
+</div><h2 class="groupheader">函数说明</h2>
+<a id="a5ad7fc761f5735a4d44d085359efb6a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ad7fc761f5735a4d44d085359efb6a5">&#9670;&nbsp;</a></span>clearingHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TerrainAnalysisNode::void terrain_analysis::clearingHandler </td>
+          <td>(</td>
+          <td class="paramtype">const std_msgs::msg::Float32::ConstSharedPtr&#160;</td>
+          <td class="paramname"><em>dis</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8cpp_source.html">terrain_analysis_new.cpp</a> 第 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00280">280</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ae50a30934a2002398ac210f237495781"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae50a30934a2002398ac210f237495781">&#9670;&nbsp;</a></span>joystickHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TerrainAnalysisNode::void terrain_analysis::joystickHandler </td>
+          <td>(</td>
+          <td class="paramtype">const sensor_msgs::msg::Joy::ConstSharedPtr&#160;</td>
+          <td class="paramname"><em>joy</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8cpp_source.html">terrain_analysis_new.cpp</a> 第 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00270">270</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a4d5d0b3a8160b0c2268cfcf5421b268a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d5d0b3a8160b0c2268cfcf5421b268a">&#9670;&nbsp;</a></span>laserCloudHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TerrainAnalysisNode::void terrain_analysis::laserCloudHandler </td>
+          <td>(</td>
+          <td class="paramtype">const sensor_msgs::msg::PointCloud2::ConstSharedPtr&#160;</td>
+          <td class="paramname"><em>laserCloud2</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8cpp_source.html">terrain_analysis_new.cpp</a> 第 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00229">229</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="terrainAnalysis_8cpp.html#a59bccaeda60feec0af6ac9f72b81fff1">laserCloud()</a>, <a class="el" href="terrainAnalysis_8cpp.html#aae3ab532deea72a76e830e04659bdb6a">laserCloudCrop()</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00064">terrainVoxelHalfWidth</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00060">terrainVoxelSize</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00100">vehicleX</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00100">vehicleY</a> , 以及 <a class="el" href="terrainAnalysis_8cpp_source.html#l00100">vehicleZ</a>.</p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="namespaceterrain__analysis_a4d5d0b3a8160b0c2268cfcf5421b268a_cgraph.png" border="0" usemap="#anamespaceterrain__analysis_a4d5d0b3a8160b0c2268cfcf5421b268a_cgraph" alt=""/></div>
+<map name="anamespaceterrain__analysis_a4d5d0b3a8160b0c2268cfcf5421b268a_cgraph" id="anamespaceterrain__analysis_a4d5d0b3a8160b0c2268cfcf5421b268a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,23,188,65"/>
+<area shape="rect" href="terrainAnalysis_8cpp.html#a59bccaeda60feec0af6ac9f72b81fff1" title=" " alt="" coords="250,5,334,32"/>
+<area shape="rect" href="terrainAnalysis_8cpp.html#aae3ab532deea72a76e830e04659bdb6a" title=" " alt="" coords="236,56,348,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a89b276cf1a734e9f48c1f19486dff9c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89b276cf1a734e9f48c1f19486dff9c9">&#9670;&nbsp;</a></span>odometryHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TerrainAnalysisNode::void terrain_analysis::odometryHandler </td>
+          <td>(</td>
+          <td class="paramtype">const nav_msgs::msg::Odometry::ConstSharedPtr&#160;</td>
+          <td class="paramname"><em>odom</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8cpp_source.html">terrain_analysis_new.cpp</a> 第 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00192">192</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="terrainAnalysis_8cpp_source.html#l00104">cosVehiclePitch</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00103">cosVehicleRoll</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00105">cosVehicleYaw</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00104">sinVehiclePitch</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00103">sinVehicleRoll</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00105">sinVehicleYaw</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00099">vehiclePitch</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00099">vehicleRoll</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00100">vehicleX</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00101">vehicleXRec</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00100">vehicleY</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00099">vehicleYaw</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00101">vehicleYRec</a> , 以及 <a class="el" href="terrainAnalysis_8cpp_source.html#l00100">vehicleZ</a>.</p>
+
+</div>
+</div>
+<a id="a830eb87e32d30de42fc13fb58293ffc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a830eb87e32d30de42fc13fb58293ffc6">&#9670;&nbsp;</a></span>timerCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TerrainAnalysisNode::void terrain_analysis::timerCallback </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8cpp_source.html">terrain_analysis_new.cpp</a> 第 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00287">287</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="terrainAnalysis_8cpp_source.html#l00104">cosVehiclePitch</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00103">cosVehicleRoll</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00105">cosVehicleYaw</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00107">downSizeFilter</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00071">kPlanarVoxelNum</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00065">kTerrainVoxelNum</a>, <a class="el" href="terrainAnalysis_8cpp.html#aae3ab532deea72a76e830e04659bdb6a">laserCloudCrop()</a>, <a class="el" href="terrainAnalysis_8cpp.html#ac6a007e787dbf722058210b365cac95a">laserCloudDwz()</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00090">planarPointElev</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00089">planarVoxelDyObs</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00088">planarVoxelEdge</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00087">planarVoxelElev</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00070">planarVoxelHalfWidth</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00068">planarVoxelSize</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00069">planarVoxelWidth</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00104">sinVehiclePitch</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00103">sinVehicleRoll</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00105">sinVehicleYaw</a>, <a class="el" href="terrainAnalysis_8cpp.html#a80fae0e24499a82a027ddd0764e94e09">terrainCloud()</a>, <a class="el" href="terrainAnalysis_8cpp.html#a25a7206bb6df31a1513eb1371ae93ce4">terrainCloudElev()</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00083">terrainVoxelCloud</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00064">terrainVoxelHalfWidth</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00060">terrainVoxelSize</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00085">terrainVoxelUpdateNum</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00086">terrainVoxelUpdateTime</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00063">terrainVoxelWidth</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00100">vehicleX</a>, <a class="el" href="terrainAnalysis_8cpp_source.html#l00100">vehicleY</a> , 以及 <a class="el" href="terrainAnalysis_8cpp_source.html#l00100">vehicleZ</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="namespaceterrain__analysis_a830eb87e32d30de42fc13fb58293ffc6_cgraph.png" border="0" usemap="#anamespaceterrain__analysis_a830eb87e32d30de42fc13fb58293ffc6_cgraph" alt=""/></div>
+<map name="anamespaceterrain__analysis_a830eb87e32d30de42fc13fb58293ffc6_cgraph" id="anamespaceterrain__analysis_a830eb87e32d30de42fc13fb58293ffc6_cgraph">
+<area shape="rect" title=" " alt="" coords="5,81,207,108"/>
+<area shape="rect" href="terrainAnalysis_8cpp.html#aae3ab532deea72a76e830e04659bdb6a" title=" " alt="" coords="258,5,370,32"/>
+<area shape="rect" href="terrainAnalysis_8cpp.html#ac6a007e787dbf722058210b365cac95a" title=" " alt="" coords="259,56,369,83"/>
+<area shape="rect" href="terrainAnalysis_8cpp.html#a80fae0e24499a82a027ddd0764e94e09" title=" " alt="" coords="268,107,360,133"/>
+<area shape="rect" href="terrainAnalysis_8cpp.html#a25a7206bb6df31a1513eb1371ae93ce4" title=" " alt="" coords="255,157,373,184"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2025年 十一月 10日 星期一 20:39:15 , 为 Terrain Analysis使用 &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -30,10 +30,19 @@ find_package(tf2 REQUIRED)
 find_package(message_filters REQUIRED)
 find_package(pcl_conversions REQUIRED)
 find_package(pcl_ros REQUIRED)
+find_package(rclcpp_components REQUIRED)
 
-add_executable(terrainAnalysis src/terrainAnalysis.cpp)
-ament_target_dependencies(
-  terrainAnalysis
+add_library(terrain_analysis SHARED
+  src/terrain_analysis_new.cpp
+)
+# Include directories
+target_include_directories(terrain_analysis
+  PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:include/${PROJECT_NAME}>
+)
+
+ament_target_dependencies(terrain_analysis
   rclcpp
   std_msgs
   sensor_msgs
@@ -44,11 +53,27 @@ ament_target_dependencies(
   tf2_geometry_msgs
   message_filters
   pcl_ros
-  pcl_conversions)
+  rclcpp_components
+  pcl_conversions
+)
 
-install(TARGETS terrainAnalysis DESTINATION lib/${PROJECT_NAME})
+rclcpp_components_register_node(terrain_analysis
+  PLUGIN "terrain_analysis::TerrainAnalysisNode"
+  EXECUTABLE terrain_analysis_node
+)
 
 install(DIRECTORY launch DESTINATION share/${PROJECT_NAME})
+install(DIRECTORY include DESTINATION share/${PROJECT_NAME})
+
+ament_export_targets(export_terrain_analysis)
+ament_export_include_directories(include)
+install(TARGETS terrain_analysis
+  EXPORT export_terrain_analysis
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION bin
+  INCLUDES DESTINATION include
+)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

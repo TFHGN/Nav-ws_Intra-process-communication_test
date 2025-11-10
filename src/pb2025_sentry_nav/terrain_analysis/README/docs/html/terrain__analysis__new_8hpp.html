@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Terrain Analysis: /home/tfhgn/nav2_ws/src/pb2025_sentry_nav/terrain_analysis/include/terrain_analysis_new.hpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Terrain Analysis
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">基于点云的实时地形分析与可通行性评估节点</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a>  </div>
+  <div class="headertitle">
+<div class="title">terrain_analysis_new.hpp 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>地形分析节点头文件 - 定时器驱动的可组合节点版本  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
+<code>#include &quot;rclcpp/rclcpp.hpp&quot;</code><br />
+<code>#include &quot;nav_msgs/msg/odometry.hpp&quot;</code><br />
+<code>#include &quot;sensor_msgs/msg/joy.hpp&quot;</code><br />
+<code>#include &quot;sensor_msgs/msg/point_cloud2.hpp&quot;</code><br />
+<code>#include &quot;std_msgs/msg/float32.hpp&quot;</code><br />
+<code>#include &quot;tf2_geometry_msgs/tf2_geometry_msgs.hpp&quot;</code><br />
+<code>#include &quot;pcl/point_cloud.h&quot;</code><br />
+<code>#include &quot;pcl/point_types.h&quot;</code><br />
+<code>#include &quot;pcl/filters/voxel_grid.h&quot;</code><br />
+<code>#include &quot;pcl_conversions/pcl_conversions.h&quot;</code><br />
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> terrain_analysis_new.hpp 的引用(Include)关系图:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="terrain__analysis__new_8hpp__incl.png" border="0" usemap="#a_2home_2tfhgn_2nav2__ws_2src_2pb2025__sentry__nav_2terrain__analysis_2include_2terrain__analysis__new_8hpp" alt=""/></div>
+<map name="a_2home_2tfhgn_2nav2__ws_2src_2pb2025__sentry__nav_2terrain__analysis_2include_2terrain__analysis__new_8hpp" id="a_2home_2tfhgn_2nav2__ws_2src_2pb2025__sentry__nav_2terrain__analysis_2include_2terrain__analysis__new_8hpp">
+<area shape="rect" title="地形分析节点头文件 &#45; 定时器驱动的可组合节点版本" alt="" coords="820,5,991,76"/>
+<area shape="rect" title=" " alt="" coords="5,131,64,158"/>
+<area shape="rect" title=" " alt="" coords="89,131,167,158"/>
+<area shape="rect" title=" " alt="" coords="192,131,251,158"/>
+<area shape="rect" title=" " alt="" coords="275,131,336,158"/>
+<area shape="rect" title=" " alt="" coords="361,131,482,158"/>
+<area shape="rect" title=" " alt="" coords="507,131,699,158"/>
+<area shape="rect" title=" " alt="" coords="723,131,896,158"/>
+<area shape="rect" title=" " alt="" coords="921,124,1082,165"/>
+<area shape="rect" title=" " alt="" coords="1107,131,1283,158"/>
+<area shape="rect" title=" " alt="" coords="1307,124,1463,165"/>
+<area shape="rect" title=" " alt="" coords="1488,131,1608,158"/>
+<area shape="rect" title=" " alt="" coords="1633,131,1754,158"/>
+<area shape="rect" title=" " alt="" coords="1779,131,1928,158"/>
+<area shape="rect" title=" " alt="" coords="1953,124,2090,165"/>
+</map>
+</div>
+</div>
+<p><a href="terrain__analysis__new_8hpp_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html">terrain_analysis::TerrainAnalysisNode</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">地形分析节点类 - 用于实时地形评估和可通行性分析  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespaceterrain__analysis"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceterrain__analysis.html">terrain_analysis</a></td></tr>
+<tr class="memdesc:namespaceterrain__analysis"><td class="mdescLeft">&#160;</td><td class="mdescRight">地形分析命名空间 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>地形分析节点头文件 - 定时器驱动的可组合节点版本 </p>
+<dl class="section author"><dt>作者</dt><dd>Hongbiao Zhu </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2024</dd></dl>
+<p>该文件定义了用于机器人导航的地形分析节点类。 主要功能包括：</p><ul>
+<li>点云数据采集与预处理</li>
+<li>基于体素的地形网格管理</li>
+<li>地面高程估计</li>
+<li>障碍物检测与动态障碍物过滤</li>
+<li>地形可通行性评估</li>
+</ul>
+<p>架构特性：</p><ul>
+<li>支持进程内通信（Intra-Process Communication）</li>
+<li>100Hz定时器驱动的非阻塞处理</li>
+<li>适配 Nav2 组件容器部署</li>
+<li>支持实时地形滚动更新 </li>
+</ul>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 中定义.</p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2025年 十一月 10日 星期一 20:39:15 , 为 Terrain Analysis使用 &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

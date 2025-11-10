@@ -1,0 +1,2788 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Terrain Analysis: terrain_analysis::TerrainAnalysisNode类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Terrain Analysis
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">基于点云的实时地形分析与可通行性评估节点</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceterrain__analysis.html">terrain_analysis</a></li><li class="navelem"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html">TerrainAnalysisNode</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="classterrain__analysis_1_1TerrainAnalysisNode-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">terrain_analysis::TerrainAnalysisNode类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>地形分析节点类 - 用于实时地形评估和可通行性分析  
+ <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> 类 terrain_analysis::TerrainAnalysisNode 继承关系图:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classterrain__analysis_1_1TerrainAnalysisNode__inherit__graph.png" border="0" usemap="#aterrain__analysis_1_1TerrainAnalysisNode_inherit__map" alt="Inheritance graph"/></div>
+<map name="aterrain__analysis_1_1TerrainAnalysisNode_inherit__map" id="aterrain__analysis_1_1TerrainAnalysisNode_inherit__map">
+<area shape="rect" title="地形分析节点类 &#45; 用于实时地形评估和可通行性分析" alt="" coords="5,131,168,560"/>
+<area shape="rect" title=" " alt="" coords="39,5,135,83"/>
+</map>
+</div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> terrain_analysis::TerrainAnalysisNode 的协作图:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classterrain__analysis_1_1TerrainAnalysisNode__coll__graph.png" border="0" usemap="#aterrain__analysis_1_1TerrainAnalysisNode_coll__map" alt="Collaboration graph"/></div>
+<map name="aterrain__analysis_1_1TerrainAnalysisNode_coll__map" id="aterrain__analysis_1_1TerrainAnalysisNode_coll__map">
+<area shape="rect" title="地形分析节点类 &#45; 用于实时地形评估和可通行性分析" alt="" coords="5,131,168,560"/>
+<area shape="rect" title=" " alt="" coords="39,5,135,83"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a5ca48c02ab9c9af66f766a0aeeac9fd7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a5ca48c02ab9c9af66f766a0aeeac9fd7">TerrainAnalysisNode</a> (const rclcpp::NodeOptions &amp;options=rclcpp::NodeOptions())</td></tr>
+<tr class="memdesc:a5ca48c02ab9c9af66f766a0aeeac9fd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数 - 初始化地形分析节点  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a5ca48c02ab9c9af66f766a0aeeac9fd7">更多...</a><br /></td></tr>
+<tr class="separator:a5ca48c02ab9c9af66f766a0aeeac9fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:af4a8be0e34f923da9a979a309f005476"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#af4a8be0e34f923da9a979a309f005476">odometryHandler</a> (const nav_msgs::msg::Odometry::ConstSharedPtr odom)</td></tr>
+<tr class="memdesc:af4a8be0e34f923da9a979a309f005476"><td class="mdescLeft">&#160;</td><td class="mdescRight">里程计回调函数 - 更新机器人位姿状态  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#af4a8be0e34f923da9a979a309f005476">更多...</a><br /></td></tr>
+<tr class="separator:af4a8be0e34f923da9a979a309f005476"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93483536951ec0a52ec1df59bce05b58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a93483536951ec0a52ec1df59bce05b58">laserCloudHandler</a> (const sensor_msgs::msg::PointCloud2::ConstSharedPtr laserCloud2)</td></tr>
+<tr class="memdesc:a93483536951ec0a52ec1df59bce05b58"><td class="mdescLeft">&#160;</td><td class="mdescRight">点云回调函数 - 接收并预处理激光雷达点云  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a93483536951ec0a52ec1df59bce05b58">更多...</a><br /></td></tr>
+<tr class="separator:a93483536951ec0a52ec1df59bce05b58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a477381b14d4f20c80d14db3c4d82ea43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a477381b14d4f20c80d14db3c4d82ea43">joystickHandler</a> (const sensor_msgs::msg::Joy::ConstSharedPtr joy)</td></tr>
+<tr class="memdesc:a477381b14d4f20c80d14db3c4d82ea43"><td class="mdescLeft">&#160;</td><td class="mdescRight">手柄回调函数 - 处理手动清空地图指令  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a477381b14d4f20c80d14db3c4d82ea43">更多...</a><br /></td></tr>
+<tr class="separator:a477381b14d4f20c80d14db3c4d82ea43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36850cdc1fd1c7902bf3beeaea265197"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a36850cdc1fd1c7902bf3beeaea265197">clearingHandler</a> (const std_msgs::msg::Float32::ConstSharedPtr dis)</td></tr>
+<tr class="memdesc:a36850cdc1fd1c7902bf3beeaea265197"><td class="mdescLeft">&#160;</td><td class="mdescRight">地图清空回调函数 - 处理自动清空指令  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a36850cdc1fd1c7902bf3beeaea265197">更多...</a><br /></td></tr>
+<tr class="separator:a36850cdc1fd1c7902bf3beeaea265197"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fe79057dabc0e27c74f5e78e01fe787"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a4fe79057dabc0e27c74f5e78e01fe787">timerCallback</a> ()</td></tr>
+<tr class="memdesc:a4fe79057dabc0e27c74f5e78e01fe787"><td class="mdescLeft">&#160;</td><td class="mdescRight">定时器回调函数 - 主处理循环（100Hz）  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a4fe79057dabc0e27c74f5e78e01fe787">更多...</a><br /></td></tr>
+<tr class="separator:a4fe79057dabc0e27c74f5e78e01fe787"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:aaf892c8002c79330edd7f518fe66b3d6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#aaf892c8002c79330edd7f518fe66b3d6">scan_voxel_size_</a></td></tr>
+<tr class="memdesc:aaf892c8002c79330edd7f518fe66b3d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">扫描体素大小 (米)，用于点云降采样  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#aaf892c8002c79330edd7f518fe66b3d6">更多...</a><br /></td></tr>
+<tr class="separator:aaf892c8002c79330edd7f518fe66b3d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42d943cfa29b42d4c8de52512e7775cf"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a42d943cfa29b42d4c8de52512e7775cf">decay_time_</a></td></tr>
+<tr class="memdesc:a42d943cfa29b42d4c8de52512e7775cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">点云衰减时间 (秒)，超过此时间的点将被移除  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a42d943cfa29b42d4c8de52512e7775cf">更多...</a><br /></td></tr>
+<tr class="separator:a42d943cfa29b42d4c8de52512e7775cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61e79d8604e3154131988c7856e7fdf0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a61e79d8604e3154131988c7856e7fdf0">no_decay_dis_</a></td></tr>
+<tr class="memdesc:a61e79d8604e3154131988c7856e7fdf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">无衰减距离 (米)，此范围内的点不受时间衰减影响  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a61e79d8604e3154131988c7856e7fdf0">更多...</a><br /></td></tr>
+<tr class="separator:a61e79d8604e3154131988c7856e7fdf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0452027eab1551e7fd6cb46add291154"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a0452027eab1551e7fd6cb46add291154">clearing_dis_</a></td></tr>
+<tr class="memdesc:a0452027eab1551e7fd6cb46add291154"><td class="mdescLeft">&#160;</td><td class="mdescRight">清空距离 (米)，执行清空时的有效半径  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a0452027eab1551e7fd6cb46add291154">更多...</a><br /></td></tr>
+<tr class="separator:a0452027eab1551e7fd6cb46add291154"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bcbcc8046b25919e3800f6701c37a02"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a1bcbcc8046b25919e3800f6701c37a02">clearing_cloud_</a></td></tr>
+<tr class="memdesc:a1bcbcc8046b25919e3800f6701c37a02"><td class="mdescLeft">&#160;</td><td class="mdescRight">清空标志，true时在下次处理中清空点云  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a1bcbcc8046b25919e3800f6701c37a02">更多...</a><br /></td></tr>
+<tr class="separator:a1bcbcc8046b25919e3800f6701c37a02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaad9ad2f95097b8bda7e1fb3030a19cf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#aaad9ad2f95097b8bda7e1fb3030a19cf">use_sorting_</a></td></tr>
+<tr class="memdesc:aaad9ad2f95097b8bda7e1fb3030a19cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否使用排序法估计地面高程（false则使用最小值法）  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#aaad9ad2f95097b8bda7e1fb3030a19cf">更多...</a><br /></td></tr>
+<tr class="separator:aaad9ad2f95097b8bda7e1fb3030a19cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade30fa9c2e9953acbaab33cba574c369"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#ade30fa9c2e9953acbaab33cba574c369">quantile_z_</a></td></tr>
+<tr class="memdesc:ade30fa9c2e9953acbaab33cba574c369"><td class="mdescLeft">&#160;</td><td class="mdescRight">地面高程分位数 (0-1)，用于排序法时选择的分位点  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#ade30fa9c2e9953acbaab33cba574c369">更多...</a><br /></td></tr>
+<tr class="separator:ade30fa9c2e9953acbaab33cba574c369"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e3da7a3208bd024f613a5704adfd8db"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a2e3da7a3208bd024f613a5704adfd8db">consider_drop_</a></td></tr>
+<tr class="memdesc:a2e3da7a3208bd024f613a5704adfd8db"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否考虑下降沿（凹陷地形）作为障碍  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a2e3da7a3208bd024f613a5704adfd8db">更多...</a><br /></td></tr>
+<tr class="separator:a2e3da7a3208bd024f613a5704adfd8db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ff0f5eddc0581a1623666f07f2f64eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a7ff0f5eddc0581a1623666f07f2f64eb">limit_ground_lift_</a></td></tr>
+<tr class="memdesc:a7ff0f5eddc0581a1623666f07f2f64eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否限制地面抬升幅度  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a7ff0f5eddc0581a1623666f07f2f64eb">更多...</a><br /></td></tr>
+<tr class="separator:a7ff0f5eddc0581a1623666f07f2f64eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51a764fd0b8eb658c320f2644d91cca0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a51a764fd0b8eb658c320f2644d91cca0">max_ground_lift_</a></td></tr>
+<tr class="memdesc:a51a764fd0b8eb658c320f2644d91cca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大地面抬升 (米)，防止异常高点影响地面估计  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a51a764fd0b8eb658c320f2644d91cca0">更多...</a><br /></td></tr>
+<tr class="separator:a51a764fd0b8eb658c320f2644d91cca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa020e80cf7a6c3125ebc48b628cc77b3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#aa020e80cf7a6c3125ebc48b628cc77b3">clear_dynamic_obs_</a></td></tr>
+<tr class="memdesc:aa020e80cf7a6c3125ebc48b628cc77b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否启用动态障碍物清除功能  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#aa020e80cf7a6c3125ebc48b628cc77b3">更多...</a><br /></td></tr>
+<tr class="separator:aa020e80cf7a6c3125ebc48b628cc77b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab889d84d6c3e33c4eef1d0880a5a4d34"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#ab889d84d6c3e33c4eef1d0880a5a4d34">min_dy_obs_dis_</a></td></tr>
+<tr class="memdesc:ab889d84d6c3e33c4eef1d0880a5a4d34"><td class="mdescLeft">&#160;</td><td class="mdescRight">动态障碍物最小检测距离 (米)  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#ab889d84d6c3e33c4eef1d0880a5a4d34">更多...</a><br /></td></tr>
+<tr class="separator:ab889d84d6c3e33c4eef1d0880a5a4d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8feb5abdc3d88f9f334a9f275ead4034"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a8feb5abdc3d88f9f334a9f275ead4034">min_dy_obs_angle_</a></td></tr>
+<tr class="memdesc:a8feb5abdc3d88f9f334a9f275ead4034"><td class="mdescLeft">&#160;</td><td class="mdescRight">动态障碍物最小角度 (度)，相对于水平面  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a8feb5abdc3d88f9f334a9f275ead4034">更多...</a><br /></td></tr>
+<tr class="separator:a8feb5abdc3d88f9f334a9f275ead4034"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4c2137376c7d84e3b79675b6d65a1aa"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#ae4c2137376c7d84e3b79675b6d65a1aa">min_dy_obs_rel_z_</a></td></tr>
+<tr class="memdesc:ae4c2137376c7d84e3b79675b6d65a1aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">动态障碍物最小相对高度 (米)  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#ae4c2137376c7d84e3b79675b6d65a1aa">更多...</a><br /></td></tr>
+<tr class="separator:ae4c2137376c7d84e3b79675b6d65a1aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5e7fd33c6663fe23cfbf697eeb922d1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#af5e7fd33c6663fe23cfbf697eeb922d1">abs_dy_obs_rel_z_thre_</a></td></tr>
+<tr class="memdesc:af5e7fd33c6663fe23cfbf697eeb922d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">动态障碍物绝对相对高度阈值 (米)  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#af5e7fd33c6663fe23cfbf697eeb922d1">更多...</a><br /></td></tr>
+<tr class="separator:af5e7fd33c6663fe23cfbf697eeb922d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ed73607dccd6c9ce75fa879d6bae8c1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a0ed73607dccd6c9ce75fa879d6bae8c1">min_dy_obs_vfov_</a></td></tr>
+<tr class="memdesc:a0ed73607dccd6c9ce75fa879d6bae8c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">动态障碍物最小垂直视场角 (度)  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a0ed73607dccd6c9ce75fa879d6bae8c1">更多...</a><br /></td></tr>
+<tr class="separator:a0ed73607dccd6c9ce75fa879d6bae8c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac070a2b3a96daca0c3bf0acf48e9526a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#ac070a2b3a96daca0c3bf0acf48e9526a">max_dy_obs_vfov_</a></td></tr>
+<tr class="memdesc:ac070a2b3a96daca0c3bf0acf48e9526a"><td class="mdescLeft">&#160;</td><td class="mdescRight">动态障碍物最大垂直视场角 (度)  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#ac070a2b3a96daca0c3bf0acf48e9526a">更多...</a><br /></td></tr>
+<tr class="separator:ac070a2b3a96daca0c3bf0acf48e9526a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12f2e782830d0dcee0c960e106de5305"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a12f2e782830d0dcee0c960e106de5305">min_dy_obs_point_num_</a></td></tr>
+<tr class="memdesc:a12f2e782830d0dcee0c960e106de5305"><td class="mdescLeft">&#160;</td><td class="mdescRight">判定为动态障碍物所需的最小点数  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a12f2e782830d0dcee0c960e106de5305">更多...</a><br /></td></tr>
+<tr class="separator:a12f2e782830d0dcee0c960e106de5305"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a188b1de409f0fdb662ed72294fa101b0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a188b1de409f0fdb662ed72294fa101b0">no_data_obstacle_</a></td></tr>
+<tr class="memdesc:a188b1de409f0fdb662ed72294fa101b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否将无数据区域标记为障碍物  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a188b1de409f0fdb662ed72294fa101b0">更多...</a><br /></td></tr>
+<tr class="separator:a188b1de409f0fdb662ed72294fa101b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1be3419ff2d1f2b0bfdd29d959a152bf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a1be3419ff2d1f2b0bfdd29d959a152bf">no_data_block_skip_num_</a></td></tr>
+<tr class="memdesc:a1be3419ff2d1f2b0bfdd29d959a152bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">无数据块跳过数量，用于膨胀无数据区域  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a1be3419ff2d1f2b0bfdd29d959a152bf">更多...</a><br /></td></tr>
+<tr class="separator:a1be3419ff2d1f2b0bfdd29d959a152bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75a25328f025792a8e23587e0730b29e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a75a25328f025792a8e23587e0730b29e">min_block_point_num_</a></td></tr>
+<tr class="memdesc:a75a25328f025792a8e23587e0730b29e"><td class="mdescLeft">&#160;</td><td class="mdescRight">体素有效所需的最小点数  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a75a25328f025792a8e23587e0730b29e">更多...</a><br /></td></tr>
+<tr class="separator:a75a25328f025792a8e23587e0730b29e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af23b0a32e8be7b159bba480fd365037e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#af23b0a32e8be7b159bba480fd365037e">vehicle_height_</a></td></tr>
+<tr class="memdesc:af23b0a32e8be7b159bba480fd365037e"><td class="mdescLeft">&#160;</td><td class="mdescRight">车辆高度 (米)，用于确定可通行性判断范围  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#af23b0a32e8be7b159bba480fd365037e">更多...</a><br /></td></tr>
+<tr class="separator:af23b0a32e8be7b159bba480fd365037e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f17a8ed10e0366603da69e43ae4176e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a9f17a8ed10e0366603da69e43ae4176e">voxel_point_update_thre_</a></td></tr>
+<tr class="memdesc:a9f17a8ed10e0366603da69e43ae4176e"><td class="mdescLeft">&#160;</td><td class="mdescRight">体素点数更新阈值，达到此值触发降采样  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a9f17a8ed10e0366603da69e43ae4176e">更多...</a><br /></td></tr>
+<tr class="separator:a9f17a8ed10e0366603da69e43ae4176e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71fbe8217b6629168b5c0bbdfb74a714"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a71fbe8217b6629168b5c0bbdfb74a714">voxel_time_update_thre_</a></td></tr>
+<tr class="memdesc:a71fbe8217b6629168b5c0bbdfb74a714"><td class="mdescLeft">&#160;</td><td class="mdescRight">体素时间更新阈值 (秒)，超过此时间强制更新  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a71fbe8217b6629168b5c0bbdfb74a714">更多...</a><br /></td></tr>
+<tr class="separator:a71fbe8217b6629168b5c0bbdfb74a714"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0456e38762656721534db5b56ebbd35"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#af0456e38762656721534db5b56ebbd35">min_rel_z_</a></td></tr>
+<tr class="memdesc:af0456e38762656721534db5b56ebbd35"><td class="mdescLeft">&#160;</td><td class="mdescRight">最小相对高度 (米)，低于此值的点被过滤  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#af0456e38762656721534db5b56ebbd35">更多...</a><br /></td></tr>
+<tr class="separator:af0456e38762656721534db5b56ebbd35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d78270232f9cd078b9a09558ebd2ff0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a8d78270232f9cd078b9a09558ebd2ff0">max_rel_z_</a></td></tr>
+<tr class="memdesc:a8d78270232f9cd078b9a09558ebd2ff0"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大相对高度 (米)，高于此值的点被过滤  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a8d78270232f9cd078b9a09558ebd2ff0">更多...</a><br /></td></tr>
+<tr class="separator:a8d78270232f9cd078b9a09558ebd2ff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a129e4a477df31bde6ec60e41a2d365fe"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a129e4a477df31bde6ec60e41a2d365fe">dis_ratio_z_</a></td></tr>
+<tr class="memdesc:a129e4a477df31bde6ec60e41a2d365fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">距离-高度比例系数，用于动态调整高度范围  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a129e4a477df31bde6ec60e41a2d365fe">更多...</a><br /></td></tr>
+<tr class="separator:a129e4a477df31bde6ec60e41a2d365fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb22ba359e5e251cd1ccb78faa9c2f83"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#acb22ba359e5e251cd1ccb78faa9c2f83">system_inited_</a></td></tr>
+<tr class="memdesc:acb22ba359e5e251cd1ccb78faa9c2f83"><td class="mdescLeft">&#160;</td><td class="mdescRight">系统初始化标志  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#acb22ba359e5e251cd1ccb78faa9c2f83">更多...</a><br /></td></tr>
+<tr class="separator:acb22ba359e5e251cd1ccb78faa9c2f83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a128702d21b82df2d72c7a947c2d5df73"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a128702d21b82df2d72c7a947c2d5df73">no_data_inited_</a></td></tr>
+<tr class="memdesc:a128702d21b82df2d72c7a947c2d5df73"><td class="mdescLeft">&#160;</td><td class="mdescRight">无数据障碍检测初始化状态 (0:未初始化, 1:已记录起点, 2:已移动足够距离)  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a128702d21b82df2d72c7a947c2d5df73">更多...</a><br /></td></tr>
+<tr class="separator:a128702d21b82df2d72c7a947c2d5df73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6786be9fc5a14828b1af1229a6e3ddda"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a6786be9fc5a14828b1af1229a6e3ddda">new_laser_cloud_</a></td></tr>
+<tr class="memdesc:a6786be9fc5a14828b1af1229a6e3ddda"><td class="mdescLeft">&#160;</td><td class="mdescRight">新点云到达标志，触发主处理循环  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a6786be9fc5a14828b1af1229a6e3ddda">更多...</a><br /></td></tr>
+<tr class="separator:a6786be9fc5a14828b1af1229a6e3ddda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e0854bbb6dea58c3318944a820b0942"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a7e0854bbb6dea58c3318944a820b0942">system_init_time_</a></td></tr>
+<tr class="memdesc:a7e0854bbb6dea58c3318944a820b0942"><td class="mdescLeft">&#160;</td><td class="mdescRight">系统初始化时间戳 (秒)  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a7e0854bbb6dea58c3318944a820b0942">更多...</a><br /></td></tr>
+<tr class="separator:a7e0854bbb6dea58c3318944a820b0942"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f8930b151b81af4d0df01d9264ed20b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a1f8930b151b81af4d0df01d9264ed20b">laser_cloud_time_</a></td></tr>
+<tr class="memdesc:a1f8930b151b81af4d0df01d9264ed20b"><td class="mdescLeft">&#160;</td><td class="mdescRight">最新点云时间戳 (秒)  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a1f8930b151b81af4d0df01d9264ed20b">更多...</a><br /></td></tr>
+<tr class="separator:a1f8930b151b81af4d0df01d9264ed20b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a410645727647a891fed6dc1cbf56d544"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a410645727647a891fed6dc1cbf56d544">vehicleX</a></td></tr>
+<tr class="memdesc:a410645727647a891fed6dc1cbf56d544"><td class="mdescLeft">&#160;</td><td class="mdescRight">机器人位置 - X坐标 (米)  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a410645727647a891fed6dc1cbf56d544">更多...</a><br /></td></tr>
+<tr class="separator:a410645727647a891fed6dc1cbf56d544"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f05901fcd8a5d6b68935d3deba9bf5a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a9f05901fcd8a5d6b68935d3deba9bf5a">vehicleY</a></td></tr>
+<tr class="memdesc:a9f05901fcd8a5d6b68935d3deba9bf5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">机器人位置 - Y坐标 (米)  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a9f05901fcd8a5d6b68935d3deba9bf5a">更多...</a><br /></td></tr>
+<tr class="separator:a9f05901fcd8a5d6b68935d3deba9bf5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4328c24e72087a44c4213fe49794a77b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a4328c24e72087a44c4213fe49794a77b">vehicleZ</a></td></tr>
+<tr class="memdesc:a4328c24e72087a44c4213fe49794a77b"><td class="mdescLeft">&#160;</td><td class="mdescRight">机器人位置 - Z坐标 (米)  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a4328c24e72087a44c4213fe49794a77b">更多...</a><br /></td></tr>
+<tr class="separator:a4328c24e72087a44c4213fe49794a77b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8426dedbae0d2a1553470332f0cd2604"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a8426dedbae0d2a1553470332f0cd2604">vehicleRoll</a></td></tr>
+<tr class="memdesc:a8426dedbae0d2a1553470332f0cd2604"><td class="mdescLeft">&#160;</td><td class="mdescRight">机器人姿态 - 横滚角 Roll (弧度)  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a8426dedbae0d2a1553470332f0cd2604">更多...</a><br /></td></tr>
+<tr class="separator:a8426dedbae0d2a1553470332f0cd2604"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23a911b171c515367e8eb968a1a1cde2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a23a911b171c515367e8eb968a1a1cde2">vehiclePitch</a></td></tr>
+<tr class="memdesc:a23a911b171c515367e8eb968a1a1cde2"><td class="mdescLeft">&#160;</td><td class="mdescRight">机器人姿态 - 俯仰角 Pitch (弧度)  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a23a911b171c515367e8eb968a1a1cde2">更多...</a><br /></td></tr>
+<tr class="separator:a23a911b171c515367e8eb968a1a1cde2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc30fbef96d4856e7f7fee0c75f580f4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#adc30fbef96d4856e7f7fee0c75f580f4">vehicleYaw</a></td></tr>
+<tr class="memdesc:adc30fbef96d4856e7f7fee0c75f580f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">机器人姿态 - 偏航角 Yaw (弧度)  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#adc30fbef96d4856e7f7fee0c75f580f4">更多...</a><br /></td></tr>
+<tr class="separator:adc30fbef96d4856e7f7fee0c75f580f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1be3983521d7d83e72265f254557691f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a1be3983521d7d83e72265f254557691f">sinVehicleRoll</a></td></tr>
+<tr class="memdesc:a1be3983521d7d83e72265f254557691f"><td class="mdescLeft">&#160;</td><td class="mdescRight">预计算的 sin(Roll)，用于坐标变换优化  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a1be3983521d7d83e72265f254557691f">更多...</a><br /></td></tr>
+<tr class="separator:a1be3983521d7d83e72265f254557691f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a0345ea577c881bb1556376d4a55315"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a6a0345ea577c881bb1556376d4a55315">cosVehicleRoll</a></td></tr>
+<tr class="memdesc:a6a0345ea577c881bb1556376d4a55315"><td class="mdescLeft">&#160;</td><td class="mdescRight">预计算的 cos(Roll)，用于坐标变换优化  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a6a0345ea577c881bb1556376d4a55315">更多...</a><br /></td></tr>
+<tr class="separator:a6a0345ea577c881bb1556376d4a55315"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e9fb83a8cd4b1e5df4085ca7b07f5e1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a4e9fb83a8cd4b1e5df4085ca7b07f5e1">sinVehiclePitch</a></td></tr>
+<tr class="memdesc:a4e9fb83a8cd4b1e5df4085ca7b07f5e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">预计算的 sin(Pitch)，用于坐标变换优化  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a4e9fb83a8cd4b1e5df4085ca7b07f5e1">更多...</a><br /></td></tr>
+<tr class="separator:a4e9fb83a8cd4b1e5df4085ca7b07f5e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98b3a75820a444b91994a93e986a4461"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a98b3a75820a444b91994a93e986a4461">cosVehiclePitch</a></td></tr>
+<tr class="memdesc:a98b3a75820a444b91994a93e986a4461"><td class="mdescLeft">&#160;</td><td class="mdescRight">预计算的 cos(Pitch)，用于坐标变换优化  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a98b3a75820a444b91994a93e986a4461">更多...</a><br /></td></tr>
+<tr class="separator:a98b3a75820a444b91994a93e986a4461"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef49184be71906134be21693f4971381"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#aef49184be71906134be21693f4971381">sinVehicleYaw</a></td></tr>
+<tr class="memdesc:aef49184be71906134be21693f4971381"><td class="mdescLeft">&#160;</td><td class="mdescRight">预计算的 sin(Yaw)，用于坐标变换优化  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#aef49184be71906134be21693f4971381">更多...</a><br /></td></tr>
+<tr class="separator:aef49184be71906134be21693f4971381"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf5cee4cab839126ffdb39c3d09e248c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#acf5cee4cab839126ffdb39c3d09e248c">cosVehicleYaw</a></td></tr>
+<tr class="memdesc:acf5cee4cab839126ffdb39c3d09e248c"><td class="mdescLeft">&#160;</td><td class="mdescRight">预计算的 cos(Yaw)，用于坐标变换优化  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#acf5cee4cab839126ffdb39c3d09e248c">更多...</a><br /></td></tr>
+<tr class="separator:acf5cee4cab839126ffdb39c3d09e248c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9f3f193ff5dba4700ed6b14c69d60d2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#ae9f3f193ff5dba4700ed6b14c69d60d2">vehicleXRec</a></td></tr>
+<tr class="memdesc:ae9f3f193ff5dba4700ed6b14c69d60d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录的机器人X坐标，用于无数据障碍检测  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#ae9f3f193ff5dba4700ed6b14c69d60d2">更多...</a><br /></td></tr>
+<tr class="separator:ae9f3f193ff5dba4700ed6b14c69d60d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a573f6a0c3d50254c53ff13b2470799f4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a573f6a0c3d50254c53ff13b2470799f4">vehicleYRec</a></td></tr>
+<tr class="memdesc:a573f6a0c3d50254c53ff13b2470799f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录的机器人Y坐标，用于无数据障碍检测  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a573f6a0c3d50254c53ff13b2470799f4">更多...</a><br /></td></tr>
+<tr class="separator:a573f6a0c3d50254c53ff13b2470799f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a632f1a37a4e122f4ff45b070361a0ced"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a632f1a37a4e122f4ff45b070361a0ced">terrain_voxel_shift_x_</a></td></tr>
+<tr class="memdesc:a632f1a37a4e122f4ff45b070361a0ced"><td class="mdescLeft">&#160;</td><td class="mdescRight">地形体素网格X方向偏移量（体素单位）  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a632f1a37a4e122f4ff45b070361a0ced">更多...</a><br /></td></tr>
+<tr class="separator:a632f1a37a4e122f4ff45b070361a0ced"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70f72daddaf80db11e550319c124303d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a70f72daddaf80db11e550319c124303d">terrain_voxel_shift_y_</a></td></tr>
+<tr class="memdesc:a70f72daddaf80db11e550319c124303d"><td class="mdescLeft">&#160;</td><td class="mdescRight">地形体素网格Y方向偏移量（体素单位）  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a70f72daddaf80db11e550319c124303d">更多...</a><br /></td></tr>
+<tr class="separator:a70f72daddaf80db11e550319c124303d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81fc990470cc05f05257856fac66b8d8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a81fc990470cc05f05257856fac66b8d8">terrainVoxelUpdateNum</a> [<a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#abba2c78c9f1981615e4d127a471e4c15">kTerrainVoxelNum</a>] = {0}</td></tr>
+<tr class="memdesc:a81fc990470cc05f05257856fac66b8d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">地形体素更新次数数组，记录每个体素累积的点数  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a81fc990470cc05f05257856fac66b8d8">更多...</a><br /></td></tr>
+<tr class="separator:a81fc990470cc05f05257856fac66b8d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3528b4aec832a967dd05164bad12af79"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a3528b4aec832a967dd05164bad12af79">terrainVoxelUpdateTime</a> [<a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#abba2c78c9f1981615e4d127a471e4c15">kTerrainVoxelNum</a>] = {0}</td></tr>
+<tr class="memdesc:a3528b4aec832a967dd05164bad12af79"><td class="mdescLeft">&#160;</td><td class="mdescRight">地形体素更新时间数组，记录每个体素最后更新时间  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a3528b4aec832a967dd05164bad12af79">更多...</a><br /></td></tr>
+<tr class="separator:a3528b4aec832a967dd05164bad12af79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf4af545392b76d9ec534504000c8a6b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#aaf4af545392b76d9ec534504000c8a6b">planarVoxelElev</a> [<a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a017a54f3b41072670a01732971937a55">kPlanarVoxelNum</a>] = {0}</td></tr>
+<tr class="memdesc:aaf4af545392b76d9ec534504000c8a6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">平面体素高程数组，存储每个体素的估计地面高度  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#aaf4af545392b76d9ec534504000c8a6b">更多...</a><br /></td></tr>
+<tr class="separator:aaf4af545392b76d9ec534504000c8a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d2c833dd5b5090e49244f860d411128"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a4d2c833dd5b5090e49244f860d411128">planarVoxelEdge</a> [<a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a017a54f3b41072670a01732971937a55">kPlanarVoxelNum</a>] = {0}</td></tr>
+<tr class="memdesc:a4d2c833dd5b5090e49244f860d411128"><td class="mdescLeft">&#160;</td><td class="mdescRight">平面体素边缘标记数组，用于无数据障碍检测  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a4d2c833dd5b5090e49244f860d411128">更多...</a><br /></td></tr>
+<tr class="separator:a4d2c833dd5b5090e49244f860d411128"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14c728e70837f6114fdf35b357b4946c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a14c728e70837f6114fdf35b357b4946c">planarVoxelDyObs</a> [<a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a017a54f3b41072670a01732971937a55">kPlanarVoxelNum</a>] = {0}</td></tr>
+<tr class="memdesc:a14c728e70837f6114fdf35b357b4946c"><td class="mdescLeft">&#160;</td><td class="mdescRight">平面体素动态障碍物计数数组  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a14c728e70837f6114fdf35b357b4946c">更多...</a><br /></td></tr>
+<tr class="separator:a14c728e70837f6114fdf35b357b4946c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0f515f7ef38df9a514f850ee5f46b02"><td class="memItemLeft" align="right" valign="top">std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#ad0f515f7ef38df9a514f850ee5f46b02">planarPointElev</a> [<a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a017a54f3b41072670a01732971937a55">kPlanarVoxelNum</a>]</td></tr>
+<tr class="memdesc:ad0f515f7ef38df9a514f850ee5f46b02"><td class="mdescLeft">&#160;</td><td class="mdescRight">平面体素点高程向量数组，存储每个体素内所有点的Z值  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#ad0f515f7ef38df9a514f850ee5f46b02">更多...</a><br /></td></tr>
+<tr class="separator:ad0f515f7ef38df9a514f850ee5f46b02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4828e4c974b7c1d6b57a2cbcaa758b0"><td class="memItemLeft" align="right" valign="top">pcl::PointCloud&lt; pcl::PointXYZI &gt;::Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#ac4828e4c974b7c1d6b57a2cbcaa758b0">laserCloud</a></td></tr>
+<tr class="memdesc:ac4828e4c974b7c1d6b57a2cbcaa758b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">原始激光雷达点云  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#ac4828e4c974b7c1d6b57a2cbcaa758b0">更多...</a><br /></td></tr>
+<tr class="separator:ac4828e4c974b7c1d6b57a2cbcaa758b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59f08fda2b7e3d4b360bf7ac19c014b7"><td class="memItemLeft" align="right" valign="top">pcl::PointCloud&lt; pcl::PointXYZI &gt;::Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a59f08fda2b7e3d4b360bf7ac19c014b7">laserCloudCrop</a></td></tr>
+<tr class="memdesc:a59f08fda2b7e3d4b360bf7ac19c014b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">裁剪后的点云（ROI内）  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a59f08fda2b7e3d4b360bf7ac19c014b7">更多...</a><br /></td></tr>
+<tr class="separator:a59f08fda2b7e3d4b360bf7ac19c014b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3951e2acd2a6a0f4b0006859e4717ea"><td class="memItemLeft" align="right" valign="top">pcl::PointCloud&lt; pcl::PointXYZI &gt;::Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#ae3951e2acd2a6a0f4b0006859e4717ea">laserCloudDwz</a></td></tr>
+<tr class="memdesc:ae3951e2acd2a6a0f4b0006859e4717ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">降采样后的点云缓冲  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#ae3951e2acd2a6a0f4b0006859e4717ea">更多...</a><br /></td></tr>
+<tr class="separator:ae3951e2acd2a6a0f4b0006859e4717ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a748cc03143b7dffaa14d89c4e84d13"><td class="memItemLeft" align="right" valign="top">pcl::PointCloud&lt; pcl::PointXYZI &gt;::Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a3a748cc03143b7dffaa14d89c4e84d13">terrainCloud</a></td></tr>
+<tr class="memdesc:a3a748cc03143b7dffaa14d89c4e84d13"><td class="mdescLeft">&#160;</td><td class="mdescRight">地形点云（用于高程计算）  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a3a748cc03143b7dffaa14d89c4e84d13">更多...</a><br /></td></tr>
+<tr class="separator:a3a748cc03143b7dffaa14d89c4e84d13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af035b85ea38e592f68fa637d021e65f2"><td class="memItemLeft" align="right" valign="top">pcl::PointCloud&lt; pcl::PointXYZI &gt;::Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#af035b85ea38e592f68fa637d021e65f2">terrainCloudElev</a></td></tr>
+<tr class="memdesc:af035b85ea38e592f68fa637d021e65f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">带高程信息的地形点云（最终输出）  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#af035b85ea38e592f68fa637d021e65f2">更多...</a><br /></td></tr>
+<tr class="separator:af035b85ea38e592f68fa637d021e65f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae938d4e0addd76437373df43863abf73"><td class="memItemLeft" align="right" valign="top">pcl::PointCloud&lt; pcl::PointXYZI &gt;::Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#ae938d4e0addd76437373df43863abf73">terrainVoxelCloud</a> [<a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#abba2c78c9f1981615e4d127a471e4c15">kTerrainVoxelNum</a>]</td></tr>
+<tr class="memdesc:ae938d4e0addd76437373df43863abf73"><td class="mdescLeft">&#160;</td><td class="mdescRight">地形体素点云数组 - 21x21个体素容器  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#ae938d4e0addd76437373df43863abf73">更多...</a><br /></td></tr>
+<tr class="separator:ae938d4e0addd76437373df43863abf73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66da38e1c235707fbd118ad39d5c3bcc"><td class="memItemLeft" align="right" valign="top">pcl::VoxelGrid&lt; pcl::PointXYZI &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a66da38e1c235707fbd118ad39d5c3bcc">downSizeFilter</a></td></tr>
+<tr class="memdesc:a66da38e1c235707fbd118ad39d5c3bcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">PCL体素网格滤波器，用于点云降采样  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a66da38e1c235707fbd118ad39d5c3bcc">更多...</a><br /></td></tr>
+<tr class="separator:a66da38e1c235707fbd118ad39d5c3bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade3cc1770fa334c730898113715f79c9"><td class="memItemLeft" align="right" valign="top">rclcpp::Subscription&lt; nav_msgs::msg::Odometry &gt;::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#ade3cc1770fa334c730898113715f79c9">subOdometry_</a></td></tr>
+<tr class="memdesc:ade3cc1770fa334c730898113715f79c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">里程计订阅器  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#ade3cc1770fa334c730898113715f79c9">更多...</a><br /></td></tr>
+<tr class="separator:ade3cc1770fa334c730898113715f79c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30c7e3cd616e7b42126c75ebc8ddd646"><td class="memItemLeft" align="right" valign="top">rclcpp::Subscription&lt; sensor_msgs::msg::PointCloud2 &gt;::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a30c7e3cd616e7b42126c75ebc8ddd646">sub_laser_cloud_</a></td></tr>
+<tr class="memdesc:a30c7e3cd616e7b42126c75ebc8ddd646"><td class="mdescLeft">&#160;</td><td class="mdescRight">点云订阅器  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a30c7e3cd616e7b42126c75ebc8ddd646">更多...</a><br /></td></tr>
+<tr class="separator:a30c7e3cd616e7b42126c75ebc8ddd646"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af65bf6d78eb407a87856d97888303854"><td class="memItemLeft" align="right" valign="top">rclcpp::Subscription&lt; sensor_msgs::msg::Joy &gt;::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#af65bf6d78eb407a87856d97888303854">sub_joystick_</a></td></tr>
+<tr class="memdesc:af65bf6d78eb407a87856d97888303854"><td class="mdescLeft">&#160;</td><td class="mdescRight">手柄订阅器  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#af65bf6d78eb407a87856d97888303854">更多...</a><br /></td></tr>
+<tr class="separator:af65bf6d78eb407a87856d97888303854"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f81f5543b7784abad30b3ca9052cbbb"><td class="memItemLeft" align="right" valign="top">rclcpp::Subscription&lt; std_msgs::msg::Float32 &gt;::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a4f81f5543b7784abad30b3ca9052cbbb">sub_clearing_</a></td></tr>
+<tr class="memdesc:a4f81f5543b7784abad30b3ca9052cbbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">地图清空订阅器  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a4f81f5543b7784abad30b3ca9052cbbb">更多...</a><br /></td></tr>
+<tr class="separator:a4f81f5543b7784abad30b3ca9052cbbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5352dbf97134c3021e8e25446faaec5b"><td class="memItemLeft" align="right" valign="top">rclcpp::Publisher&lt; sensor_msgs::msg::PointCloud2 &gt;::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a5352dbf97134c3021e8e25446faaec5b">pub_laser_cloud_</a></td></tr>
+<tr class="memdesc:a5352dbf97134c3021e8e25446faaec5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">地形图发布器  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a5352dbf97134c3021e8e25446faaec5b">更多...</a><br /></td></tr>
+<tr class="separator:a5352dbf97134c3021e8e25446faaec5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a5c9aac929f4ec14d24f45cf0ee3af7"><td class="memItemLeft" align="right" valign="top">rclcpp::TimerBase::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a0a5c9aac929f4ec14d24f45cf0ee3af7">timer_</a></td></tr>
+<tr class="memdesc:a0a5c9aac929f4ec14d24f45cf0ee3af7"><td class="mdescLeft">&#160;</td><td class="mdescRight">主处理定时器 (100Hz)  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a0a5c9aac929f4ec14d24f45cf0ee3af7">更多...</a><br /></td></tr>
+<tr class="separator:a0a5c9aac929f4ec14d24f45cf0ee3af7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a15627d86bd72b5fc99d9465fbdefdf70"><td class="memItemLeft" align="right" valign="top">constexpr static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a15627d86bd72b5fc99d9465fbdefdf70">terrainVoxelSize</a> = 1.0</td></tr>
+<tr class="memdesc:a15627d86bd72b5fc99d9465fbdefdf70"><td class="mdescLeft">&#160;</td><td class="mdescRight">地形体素大小 (米) - 每个体素边长1.0米  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a15627d86bd72b5fc99d9465fbdefdf70">更多...</a><br /></td></tr>
+<tr class="separator:a15627d86bd72b5fc99d9465fbdefdf70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae19d06d6e859cc07bc92b4578a630a7c"><td class="memItemLeft" align="right" valign="top">constexpr static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#ae19d06d6e859cc07bc92b4578a630a7c">terrainVoxelWidth</a> = 21</td></tr>
+<tr class="memdesc:ae19d06d6e859cc07bc92b4578a630a7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">地形体素网格宽度 (体素数) - 21x21网格  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#ae19d06d6e859cc07bc92b4578a630a7c">更多...</a><br /></td></tr>
+<tr class="separator:ae19d06d6e859cc07bc92b4578a630a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaff336b7c6500a021474704424a2eaba"><td class="memItemLeft" align="right" valign="top">constexpr static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#aaff336b7c6500a021474704424a2eaba">terrainVoxelHalfWidth</a> = (<a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#ae19d06d6e859cc07bc92b4578a630a7c">terrainVoxelWidth</a> - 1) / 2</td></tr>
+<tr class="memdesc:aaff336b7c6500a021474704424a2eaba"><td class="mdescLeft">&#160;</td><td class="mdescRight">地形体素网格半宽 - 网格中心到边缘的体素数  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#aaff336b7c6500a021474704424a2eaba">更多...</a><br /></td></tr>
+<tr class="separator:aaff336b7c6500a021474704424a2eaba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abba2c78c9f1981615e4d127a471e4c15"><td class="memItemLeft" align="right" valign="top">constexpr static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#abba2c78c9f1981615e4d127a471e4c15">kTerrainVoxelNum</a> = <a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#ae19d06d6e859cc07bc92b4578a630a7c">terrainVoxelWidth</a> * <a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#ae19d06d6e859cc07bc92b4578a630a7c">terrainVoxelWidth</a></td></tr>
+<tr class="memdesc:abba2c78c9f1981615e4d127a471e4c15"><td class="mdescLeft">&#160;</td><td class="mdescRight">地形体素总数 - 21x21 = 441个体素  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#abba2c78c9f1981615e4d127a471e4c15">更多...</a><br /></td></tr>
+<tr class="separator:abba2c78c9f1981615e4d127a471e4c15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ebd1088dad469b287ed15d6af669c17"><td class="memItemLeft" align="right" valign="top">constexpr static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a2ebd1088dad469b287ed15d6af669c17">planarVoxelSize</a> = 0.2</td></tr>
+<tr class="memdesc:a2ebd1088dad469b287ed15d6af669c17"><td class="mdescLeft">&#160;</td><td class="mdescRight">平面体素大小 (米) - 用于精细地面高程估计  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a2ebd1088dad469b287ed15d6af669c17">更多...</a><br /></td></tr>
+<tr class="separator:a2ebd1088dad469b287ed15d6af669c17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6aa991115f903b17963d7e7691a8244"><td class="memItemLeft" align="right" valign="top">constexpr static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#ae6aa991115f903b17963d7e7691a8244">planarVoxelWidth</a> = 51</td></tr>
+<tr class="memdesc:ae6aa991115f903b17963d7e7691a8244"><td class="mdescLeft">&#160;</td><td class="mdescRight">平面体素网格宽度 (体素数) - 51x51网格  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#ae6aa991115f903b17963d7e7691a8244">更多...</a><br /></td></tr>
+<tr class="separator:ae6aa991115f903b17963d7e7691a8244"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35760ee0a31e45c55b68479c10360a95"><td class="memItemLeft" align="right" valign="top">constexpr static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a35760ee0a31e45c55b68479c10360a95">planarVoxelHalfWidth</a> = (<a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#ae6aa991115f903b17963d7e7691a8244">planarVoxelWidth</a> - 1) / 2</td></tr>
+<tr class="memdesc:a35760ee0a31e45c55b68479c10360a95"><td class="mdescLeft">&#160;</td><td class="mdescRight">平面体素网格半宽  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a35760ee0a31e45c55b68479c10360a95">更多...</a><br /></td></tr>
+<tr class="separator:a35760ee0a31e45c55b68479c10360a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a017a54f3b41072670a01732971937a55"><td class="memItemLeft" align="right" valign="top">constexpr static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a017a54f3b41072670a01732971937a55">kPlanarVoxelNum</a> = <a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#ae6aa991115f903b17963d7e7691a8244">planarVoxelWidth</a> * <a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#ae6aa991115f903b17963d7e7691a8244">planarVoxelWidth</a></td></tr>
+<tr class="memdesc:a017a54f3b41072670a01732971937a55"><td class="mdescLeft">&#160;</td><td class="mdescRight">平面体素总数 - 51x51 = 2601个体素  <a href="classterrain__analysis_1_1TerrainAnalysisNode.html#a017a54f3b41072670a01732971937a55">更多...</a><br /></td></tr>
+<tr class="separator:a017a54f3b41072670a01732971937a55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>地形分析节点类 - 用于实时地形评估和可通行性分析 </p>
+<p>该类实现了基于点云的地形分析功能，通过维护一个滚动的体素网格来 跟踪机器人周围的地形信息。主要特性包括：</p>
+<p>**数据流程**：</p><ol type="1">
+<li>接收激光雷达点云 (registered_scan)</li>
+<li>接收里程计位姿 (lidar_odometry)</li>
+<li>进行体素化与地形网格更新</li>
+<li>计算地面高程与障碍物分布</li>
+<li>发布带高程信息的地形图 (terrain_map)</li>
+</ol>
+<p>**处理模式**：</p><ul>
+<li>100Hz 定时器驱动主处理循环</li>
+<li>回调函数仅更新缓冲区标志</li>
+<li>所有计算在定时器回调中完成</li>
+</ul>
+<p>**坐标系**：</p><ul>
+<li>输入/输出均使用 "odom" 坐标系</li>
+<li>相对于机器人基座的地形评估</li>
+</ul>
+<dl class="section note"><dt>注解</dt><dd>该节点设计为可组合组件，可加载到 Nav2 容器中 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00088">88</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a5ca48c02ab9c9af66f766a0aeeac9fd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ca48c02ab9c9af66f766a0aeeac9fd7">&#9670;&nbsp;</a></span>TerrainAnalysisNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">terrain_analysis::TerrainAnalysisNode::TerrainAnalysisNode </td>
+          <td>(</td>
+          <td class="paramtype">const rclcpp::NodeOptions &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>rclcpp::NodeOptions()</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造函数 - 初始化地形分析节点 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">options</td><td>ROS2 节点选项，用于配置节点行为</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>构造函数执行以下初始化步骤：</p><ol type="1">
+<li>**参数声明与加载**：声明并读取所有配置参数</li>
+<li>**体素网格初始化**：创建地形体素云数组</li>
+<li>**订阅器创建**：<ul>
+<li>lidar_odometry：接收机器人位姿</li>
+<li>registered_scan：接收配准后的点云</li>
+<li>joy：接收手柄清空指令</li>
+<li>map_clearing：接收地图清空指令</li>
+</ul>
+</li>
+<li>**发布器创建**：terrain_map - 发布带高程的地形图</li>
+<li>**定时器创建**：100Hz 主处理循环</li>
+</ol>
+<dl class="section note"><dt>注解</dt><dd>使用 SensorDataQoS 以支持高频传感器数据 </dd></dl>
+<dl class="section warning"><dt>警告</dt><dd>构造函数设计为非阻塞，适配组件容器环境 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8cpp_source.html">terrain_analysis_new.cpp</a> 第 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">20</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00276">abs_dy_obs_rel_z_thre_</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00264">clear_dynamic_obs_</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00243">clearing_dis_</a>, <a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a36850cdc1fd1c7902bf3beeaea265197">clearingHandler()</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00255">consider_drop_</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00237">decay_time_</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00312">dis_ratio_z_</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00423">downSizeFilter</a>, <a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a477381b14d4f20c80d14db3c4d82ea43">joystickHandler()</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00379">kTerrainVoxelNum</a>, <a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a93483536951ec0a52ec1df59bce05b58">laserCloudHandler()</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00258">limit_ground_lift_</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00282">max_dy_obs_vfov_</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00261">max_ground_lift_</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00309">max_rel_z_</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00294">min_block_point_num_</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00270">min_dy_obs_angle_</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00267">min_dy_obs_dis_</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00285">min_dy_obs_point_num_</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00273">min_dy_obs_rel_z_</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00279">min_dy_obs_vfov_</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00306">min_rel_z_</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00291">no_data_block_skip_num_</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00288">no_data_obstacle_</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00240">no_decay_dis_</a>, <a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#af4a8be0e34f923da9a979a309f005476">odometryHandler()</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00436">pub_laser_cloud_</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00252">quantile_z_</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00234">scan_voxel_size_</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00434">sub_clearing_</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00432">sub_joystick_</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00430">sub_laser_cloud_</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00428">subOdometry_</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00420">terrainVoxelCloud</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00438">timer_</a>, <a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a4fe79057dabc0e27c74f5e78e01fe787">timerCallback()</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00249">use_sorting_</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00297">vehicle_height_</a>, <a class="el" href="terrain__analysis__new_8hpp_source.html#l00300">voxel_point_update_thre_</a> , 以及 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00303">voxel_time_update_thre_</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classterrain__analysis_1_1TerrainAnalysisNode_a5ca48c02ab9c9af66f766a0aeeac9fd7_cgraph.png" border="0" usemap="#aclassterrain__analysis_1_1TerrainAnalysisNode_a5ca48c02ab9c9af66f766a0aeeac9fd7_cgraph" alt=""/></div>
+<map name="aclassterrain__analysis_1_1TerrainAnalysisNode_a5ca48c02ab9c9af66f766a0aeeac9fd7_cgraph" id="aclassterrain__analysis_1_1TerrainAnalysisNode_a5ca48c02ab9c9af66f766a0aeeac9fd7_cgraph">
+<area shape="rect" title="构造函数 &#45; 初始化地形分析节点" alt="" coords="5,136,236,177"/>
+<area shape="rect" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a36850cdc1fd1c7902bf3beeaea265197" title="地图清空回调函数 &#45; 处理自动清空指令" alt="" coords="293,5,494,47"/>
+<area shape="rect" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a477381b14d4f20c80d14db3c4d82ea43" title="手柄回调函数 &#45; 处理手动清空地图指令" alt="" coords="293,71,494,112"/>
+<area shape="rect" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a93483536951ec0a52ec1df59bce05b58" title="点云回调函数 &#45; 接收并预处理激光雷达点云" alt="" coords="284,136,503,177"/>
+<area shape="rect" href="classterrain__analysis_1_1TerrainAnalysisNode.html#af4a8be0e34f923da9a979a309f005476" title="里程计回调函数 &#45; 更新机器人位姿状态" alt="" coords="288,201,499,243"/>
+<area shape="rect" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a4fe79057dabc0e27c74f5e78e01fe787" title="定时器回调函数 &#45; 主处理循环（100Hz）" alt="" coords="298,267,489,308"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a36850cdc1fd1c7902bf3beeaea265197"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36850cdc1fd1c7902bf3beeaea265197">&#9670;&nbsp;</a></span>clearingHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void terrain_analysis::TerrainAnalysisNode::clearingHandler </td>
+          <td>(</td>
+          <td class="paramtype">const std_msgs::msg::Float32::ConstSharedPtr&#160;</td>
+          <td class="paramname"><em>dis</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>地图清空回调函数 - 处理自动清空指令 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dis</td><td>清空距离消息</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>接收并应用新的清空距离参数：</p><ul>
+<li>更新 clearing_dis_（清空半径）</li>
+<li>重置无数据障碍检测状态</li>
+<li>触发下一次处理时清空指定半径内的旧数据</li>
+</ul>
+<dl class="section note"><dt>注解</dt><dd>与手柄清空不同，该方法支持动态调整清空范围 </dd></dl>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classterrain__analysis_1_1TerrainAnalysisNode_a36850cdc1fd1c7902bf3beeaea265197_icgraph.png" border="0" usemap="#aclassterrain__analysis_1_1TerrainAnalysisNode_a36850cdc1fd1c7902bf3beeaea265197_icgraph" alt=""/></div>
+<map name="aclassterrain__analysis_1_1TerrainAnalysisNode_a36850cdc1fd1c7902bf3beeaea265197_icgraph" id="aclassterrain__analysis_1_1TerrainAnalysisNode_a36850cdc1fd1c7902bf3beeaea265197_icgraph">
+<area shape="rect" title="地图清空回调函数 &#45; 处理自动清空指令" alt="" coords="284,5,485,47"/>
+<area shape="rect" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a5ca48c02ab9c9af66f766a0aeeac9fd7" title="构造函数 &#45; 初始化地形分析节点" alt="" coords="5,5,236,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a477381b14d4f20c80d14db3c4d82ea43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a477381b14d4f20c80d14db3c4d82ea43">&#9670;&nbsp;</a></span>joystickHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void terrain_analysis::TerrainAnalysisNode::joystickHandler </td>
+          <td>(</td>
+          <td class="paramtype">const sensor_msgs::msg::Joy::ConstSharedPtr&#160;</td>
+          <td class="paramname"><em>joy</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>手柄回调函数 - 处理手动清空地图指令 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">joy</td><td>手柄消息</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>监听手柄的按钮5（索引5），按下时触发地图清空：</p><ul>
+<li>重置无数据障碍检测状态 (no_data_inited_ = 0)</li>
+<li>设置清空标志 (clearing_cloud_ = true)</li>
+</ul>
+<dl class="section note"><dt>注解</dt><dd>通常用于调试或重置场景 </dd></dl>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classterrain__analysis_1_1TerrainAnalysisNode_a477381b14d4f20c80d14db3c4d82ea43_icgraph.png" border="0" usemap="#aclassterrain__analysis_1_1TerrainAnalysisNode_a477381b14d4f20c80d14db3c4d82ea43_icgraph" alt=""/></div>
+<map name="aclassterrain__analysis_1_1TerrainAnalysisNode_a477381b14d4f20c80d14db3c4d82ea43_icgraph" id="aclassterrain__analysis_1_1TerrainAnalysisNode_a477381b14d4f20c80d14db3c4d82ea43_icgraph">
+<area shape="rect" title="手柄回调函数 &#45; 处理手动清空地图指令" alt="" coords="284,5,485,47"/>
+<area shape="rect" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a5ca48c02ab9c9af66f766a0aeeac9fd7" title="构造函数 &#45; 初始化地形分析节点" alt="" coords="5,5,236,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a93483536951ec0a52ec1df59bce05b58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93483536951ec0a52ec1df59bce05b58">&#9670;&nbsp;</a></span>laserCloudHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void terrain_analysis::TerrainAnalysisNode::laserCloudHandler </td>
+          <td>(</td>
+          <td class="paramtype">const sensor_msgs::msg::PointCloud2::ConstSharedPtr&#160;</td>
+          <td class="paramname"><em>laserCloud2</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>点云回调函数 - 接收并预处理激光雷达点云 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">laserCloud2</td><td>激光雷达点云消息（ROS2格式）</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>该函数执行点云的初步处理：</p><ol type="1">
+<li>**时间戳管理**：提取点云时间戳，初始化系统时钟</li>
+<li>**格式转换**：将 ROS2 消息转换为 PCL 点云</li>
+<li>**空间裁剪**：过滤出机器人周围感兴趣区域的点<ul>
+<li>高度范围：min_rel_z_ 到 max_rel_z_（相对于机器人）</li>
+<li>水平范围：terrainVoxelSize * (terrainVoxelHalfWidth + 1)</li>
+</ul>
+</li>
+<li>**时间戳标记**：为每个点标记相对于系统初始化的时间</li>
+<li>**标志设置**：设置 new_laser_cloud_ 标志触发主处理</li>
+</ol>
+<dl class="section note"><dt>注解</dt><dd>裁剪后的点云存储在 laserCloudCrop 中 </dd>
+<dd>
+采用动态高度范围（与距离成正比）以适应地形起伏 </dd></dl>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classterrain__analysis_1_1TerrainAnalysisNode_a93483536951ec0a52ec1df59bce05b58_icgraph.png" border="0" usemap="#aclassterrain__analysis_1_1TerrainAnalysisNode_a93483536951ec0a52ec1df59bce05b58_icgraph" alt=""/></div>
+<map name="aclassterrain__analysis_1_1TerrainAnalysisNode_a93483536951ec0a52ec1df59bce05b58_icgraph" id="aclassterrain__analysis_1_1TerrainAnalysisNode_a93483536951ec0a52ec1df59bce05b58_icgraph">
+<area shape="rect" title="点云回调函数 &#45; 接收并预处理激光雷达点云" alt="" coords="284,5,503,47"/>
+<area shape="rect" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a5ca48c02ab9c9af66f766a0aeeac9fd7" title="构造函数 &#45; 初始化地形分析节点" alt="" coords="5,5,236,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af4a8be0e34f923da9a979a309f005476"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4a8be0e34f923da9a979a309f005476">&#9670;&nbsp;</a></span>odometryHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void terrain_analysis::TerrainAnalysisNode::odometryHandler </td>
+          <td>(</td>
+          <td class="paramtype">const nav_msgs::msg::Odometry::ConstSharedPtr&#160;</td>
+          <td class="paramname"><em>odom</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>里程计回调函数 - 更新机器人位姿状态 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">odom</td><td>里程计消息，包含机器人的位置和姿态信息</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>该函数从里程计消息中提取并更新以下状态：</p><ul>
+<li>机器人位置 (vehicleX, vehicleY, vehicleZ)</li>
+<li>机器人姿态角 (vehicleRoll, vehiclePitch, vehicleYaw)</li>
+<li>预计算的三角函数值（用于坐标变换优化）</li>
+<li>初始化无数据障碍检测的参考位置</li>
+</ul>
+<dl class="section note"><dt>注解</dt><dd>姿态角通过四元数转换为欧拉角（RPY） </dd>
+<dd>
+三角函数值预计算以减少主处理循环的计算负担 </dd></dl>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classterrain__analysis_1_1TerrainAnalysisNode_af4a8be0e34f923da9a979a309f005476_icgraph.png" border="0" usemap="#aclassterrain__analysis_1_1TerrainAnalysisNode_af4a8be0e34f923da9a979a309f005476_icgraph" alt=""/></div>
+<map name="aclassterrain__analysis_1_1TerrainAnalysisNode_af4a8be0e34f923da9a979a309f005476_icgraph" id="aclassterrain__analysis_1_1TerrainAnalysisNode_af4a8be0e34f923da9a979a309f005476_icgraph">
+<area shape="rect" title="里程计回调函数 &#45; 更新机器人位姿状态" alt="" coords="284,5,495,47"/>
+<area shape="rect" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a5ca48c02ab9c9af66f766a0aeeac9fd7" title="构造函数 &#45; 初始化地形分析节点" alt="" coords="5,5,236,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4fe79057dabc0e27c74f5e78e01fe787"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fe79057dabc0e27c74f5e78e01fe787">&#9670;&nbsp;</a></span>timerCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void terrain_analysis::TerrainAnalysisNode::timerCallback </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>定时器回调函数 - 主处理循环（100Hz） </p>
+<p>该函数是地形分析的核心处理逻辑，每10ms执行一次，包含以下步骤：</p>
+<p>**1. 体素网格滚动更新**：</p><ul>
+<li>根据机器人移动动态调整地形网格原点</li>
+<li>移出旧体素，清空并重用内存</li>
+<li>保持机器人始终在网格中心区域</li>
+</ul>
+<p>**2. 点云堆叠与体素化**：</p><ul>
+<li>将新点云按位置映射到对应体素</li>
+<li>累积多帧点云以提高密度</li>
+<li>记录体素更新次数和时间</li>
+</ul>
+<p>**3. 体素降采样与衰减**：</p><ul>
+<li>对达到更新阈值的体素执行降采样</li>
+<li>应用时间衰减规则移除过期点</li>
+<li>根据距离和时间保留有效数据</li>
+</ul>
+<p>**4. 地面高程估计**：</p><ul>
+<li>将点云投影到平面体素网格</li>
+<li>使用分位数或最小值法估计地面高度</li>
+<li>限制地面抬升以过滤异常值</li>
+</ul>
+<p>**5. 动态障碍物过滤**（可选）：</p><ul>
+<li>检测高于地面且在特定视场角内的点</li>
+<li>累积障碍物点数判断是否为动态物体</li>
+<li>过滤掉可能的移动障碍物</li>
+</ul>
+<p>**6. 可通行性评估**：</p><ul>
+<li>计算点相对于地面的高度差</li>
+<li>过滤出车辆高度范围内的障碍</li>
+<li>标记无数据区域为潜在障碍</li>
+</ul>
+<p>**7. 地形图发布**：</p><ul>
+<li>将带高程信息的点云转换为ROS2消息</li>
+<li>设置正确的时间戳和坐标系</li>
+<li>通过 terrain_map 话题发布</li>
+</ul>
+<dl class="section note"><dt>注解</dt><dd>仅在 new_laser_cloud_ 为 true 时执行处理 </dd>
+<dd>
+所有计算均在 "odom" 坐标系下进行 </dd></dl>
+<dl class="section warning"><dt>警告</dt><dd>确保处理时间 &lt; 10ms 以避免定时器堆积 </dd></dl>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classterrain__analysis_1_1TerrainAnalysisNode_a4fe79057dabc0e27c74f5e78e01fe787_icgraph.png" border="0" usemap="#aclassterrain__analysis_1_1TerrainAnalysisNode_a4fe79057dabc0e27c74f5e78e01fe787_icgraph" alt=""/></div>
+<map name="aclassterrain__analysis_1_1TerrainAnalysisNode_a4fe79057dabc0e27c74f5e78e01fe787_icgraph" id="aclassterrain__analysis_1_1TerrainAnalysisNode_a4fe79057dabc0e27c74f5e78e01fe787_icgraph">
+<area shape="rect" title="定时器回调函数 &#45; 主处理循环（100Hz）" alt="" coords="284,5,475,47"/>
+<area shape="rect" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a5ca48c02ab9c9af66f766a0aeeac9fd7" title="构造函数 &#45; 初始化地形分析节点" alt="" coords="5,5,236,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="af5e7fd33c6663fe23cfbf697eeb922d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5e7fd33c6663fe23cfbf697eeb922d1">&#9670;&nbsp;</a></span>abs_dy_obs_rel_z_thre_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::abs_dy_obs_rel_z_thre_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>动态障碍物绝对相对高度阈值 (米) </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00276">276</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="aa020e80cf7a6c3125ebc48b628cc77b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa020e80cf7a6c3125ebc48b628cc77b3">&#9670;&nbsp;</a></span>clear_dynamic_obs_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool terrain_analysis::TerrainAnalysisNode::clear_dynamic_obs_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>是否启用动态障碍物清除功能 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00264">264</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="a1bcbcc8046b25919e3800f6701c37a02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bcbcc8046b25919e3800f6701c37a02">&#9670;&nbsp;</a></span>clearing_cloud_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool terrain_analysis::TerrainAnalysisNode::clearing_cloud_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>清空标志，true时在下次处理中清空点云 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00246">246</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a0452027eab1551e7fd6cb46add291154"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0452027eab1551e7fd6cb46add291154">&#9670;&nbsp;</a></span>clearing_dis_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::clearing_dis_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>清空距离 (米)，执行清空时的有效半径 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00243">243</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="a2e3da7a3208bd024f613a5704adfd8db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e3da7a3208bd024f613a5704adfd8db">&#9670;&nbsp;</a></span>consider_drop_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool terrain_analysis::TerrainAnalysisNode::consider_drop_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>是否考虑下降沿（凹陷地形）作为障碍 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00255">255</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="a98b3a75820a444b91994a93e986a4461"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98b3a75820a444b91994a93e986a4461">&#9670;&nbsp;</a></span>cosVehiclePitch</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::cosVehiclePitch</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>预计算的 cos(Pitch)，用于坐标变换优化 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00354">354</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a6a0345ea577c881bb1556376d4a55315"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a0345ea577c881bb1556376d4a55315">&#9670;&nbsp;</a></span>cosVehicleRoll</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::cosVehicleRoll</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>预计算的 cos(Roll)，用于坐标变换优化 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00350">350</a> 行定义.</p>
+
+</div>
+</div>
+<a id="acf5cee4cab839126ffdb39c3d09e248c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf5cee4cab839126ffdb39c3d09e248c">&#9670;&nbsp;</a></span>cosVehicleYaw</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::cosVehicleYaw</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>预计算的 cos(Yaw)，用于坐标变换优化 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00358">358</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a42d943cfa29b42d4c8de52512e7775cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42d943cfa29b42d4c8de52512e7775cf">&#9670;&nbsp;</a></span>decay_time_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::decay_time_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>点云衰减时间 (秒)，超过此时间的点将被移除 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00237">237</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="a129e4a477df31bde6ec60e41a2d365fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a129e4a477df31bde6ec60e41a2d365fe">&#9670;&nbsp;</a></span>dis_ratio_z_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::dis_ratio_z_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>距离-高度比例系数，用于动态调整高度范围 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00312">312</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="a66da38e1c235707fbd118ad39d5c3bcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66da38e1c235707fbd118ad39d5c3bcc">&#9670;&nbsp;</a></span>downSizeFilter</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">pcl::VoxelGrid&lt;pcl::PointXYZI&gt; terrain_analysis::TerrainAnalysisNode::downSizeFilter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>PCL体素网格滤波器，用于点云降采样 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00423">423</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="a017a54f3b41072670a01732971937a55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a017a54f3b41072670a01732971937a55">&#9670;&nbsp;</a></span>kPlanarVoxelNum</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr static int terrain_analysis::TerrainAnalysisNode::kPlanarVoxelNum = <a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#ae6aa991115f903b17963d7e7691a8244">planarVoxelWidth</a> * <a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#ae6aa991115f903b17963d7e7691a8244">planarVoxelWidth</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>平面体素总数 - 51x51 = 2601个体素 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00390">390</a> 行定义.</p>
+
+</div>
+</div>
+<a id="abba2c78c9f1981615e4d127a471e4c15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abba2c78c9f1981615e4d127a471e4c15">&#9670;&nbsp;</a></span>kTerrainVoxelNum</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr static int terrain_analysis::TerrainAnalysisNode::kTerrainVoxelNum = <a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#ae19d06d6e859cc07bc92b4578a630a7c">terrainVoxelWidth</a> * <a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#ae19d06d6e859cc07bc92b4578a630a7c">terrainVoxelWidth</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>地形体素总数 - 21x21 = 441个体素 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00379">379</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="a1f8930b151b81af4d0df01d9264ed20b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f8930b151b81af4d0df01d9264ed20b">&#9670;&nbsp;</a></span>laser_cloud_time_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::laser_cloud_time_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>最新点云时间戳 (秒) </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00329">329</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ac4828e4c974b7c1d6b57a2cbcaa758b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4828e4c974b7c1d6b57a2cbcaa758b0">&#9670;&nbsp;</a></span>laserCloud</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">pcl::PointCloud&lt;pcl::PointXYZI&gt;::Ptr terrain_analysis::TerrainAnalysisNode::laserCloud</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>原始激光雷达点云 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00410">410</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a59f08fda2b7e3d4b360bf7ac19c014b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59f08fda2b7e3d4b360bf7ac19c014b7">&#9670;&nbsp;</a></span>laserCloudCrop</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">pcl::PointCloud&lt;pcl::PointXYZI&gt;::Ptr terrain_analysis::TerrainAnalysisNode::laserCloudCrop</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>裁剪后的点云（ROI内） </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00412">412</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ae3951e2acd2a6a0f4b0006859e4717ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3951e2acd2a6a0f4b0006859e4717ea">&#9670;&nbsp;</a></span>laserCloudDwz</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">pcl::PointCloud&lt;pcl::PointXYZI&gt;::Ptr terrain_analysis::TerrainAnalysisNode::laserCloudDwz</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>降采样后的点云缓冲 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00414">414</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a7ff0f5eddc0581a1623666f07f2f64eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ff0f5eddc0581a1623666f07f2f64eb">&#9670;&nbsp;</a></span>limit_ground_lift_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool terrain_analysis::TerrainAnalysisNode::limit_ground_lift_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>是否限制地面抬升幅度 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00258">258</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="ac070a2b3a96daca0c3bf0acf48e9526a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac070a2b3a96daca0c3bf0acf48e9526a">&#9670;&nbsp;</a></span>max_dy_obs_vfov_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::max_dy_obs_vfov_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>动态障碍物最大垂直视场角 (度) </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00282">282</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="a51a764fd0b8eb658c320f2644d91cca0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51a764fd0b8eb658c320f2644d91cca0">&#9670;&nbsp;</a></span>max_ground_lift_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::max_ground_lift_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>最大地面抬升 (米)，防止异常高点影响地面估计 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00261">261</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="a8d78270232f9cd078b9a09558ebd2ff0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d78270232f9cd078b9a09558ebd2ff0">&#9670;&nbsp;</a></span>max_rel_z_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::max_rel_z_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>最大相对高度 (米)，高于此值的点被过滤 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00309">309</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="a75a25328f025792a8e23587e0730b29e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75a25328f025792a8e23587e0730b29e">&#9670;&nbsp;</a></span>min_block_point_num_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int terrain_analysis::TerrainAnalysisNode::min_block_point_num_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>体素有效所需的最小点数 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00294">294</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="a8feb5abdc3d88f9f334a9f275ead4034"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8feb5abdc3d88f9f334a9f275ead4034">&#9670;&nbsp;</a></span>min_dy_obs_angle_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::min_dy_obs_angle_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>动态障碍物最小角度 (度)，相对于水平面 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00270">270</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="ab889d84d6c3e33c4eef1d0880a5a4d34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab889d84d6c3e33c4eef1d0880a5a4d34">&#9670;&nbsp;</a></span>min_dy_obs_dis_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::min_dy_obs_dis_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>动态障碍物最小检测距离 (米) </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00267">267</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="a12f2e782830d0dcee0c960e106de5305"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12f2e782830d0dcee0c960e106de5305">&#9670;&nbsp;</a></span>min_dy_obs_point_num_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int terrain_analysis::TerrainAnalysisNode::min_dy_obs_point_num_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>判定为动态障碍物所需的最小点数 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00285">285</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="ae4c2137376c7d84e3b79675b6d65a1aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4c2137376c7d84e3b79675b6d65a1aa">&#9670;&nbsp;</a></span>min_dy_obs_rel_z_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::min_dy_obs_rel_z_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>动态障碍物最小相对高度 (米) </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00273">273</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="a0ed73607dccd6c9ce75fa879d6bae8c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ed73607dccd6c9ce75fa879d6bae8c1">&#9670;&nbsp;</a></span>min_dy_obs_vfov_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::min_dy_obs_vfov_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>动态障碍物最小垂直视场角 (度) </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00279">279</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="af0456e38762656721534db5b56ebbd35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0456e38762656721534db5b56ebbd35">&#9670;&nbsp;</a></span>min_rel_z_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::min_rel_z_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>最小相对高度 (米)，低于此值的点被过滤 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00306">306</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="a6786be9fc5a14828b1af1229a6e3ddda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6786be9fc5a14828b1af1229a6e3ddda">&#9670;&nbsp;</a></span>new_laser_cloud_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool terrain_analysis::TerrainAnalysisNode::new_laser_cloud_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>新点云到达标志，触发主处理循环 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00323">323</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a1be3419ff2d1f2b0bfdd29d959a152bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1be3419ff2d1f2b0bfdd29d959a152bf">&#9670;&nbsp;</a></span>no_data_block_skip_num_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int terrain_analysis::TerrainAnalysisNode::no_data_block_skip_num_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>无数据块跳过数量，用于膨胀无数据区域 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00291">291</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="a128702d21b82df2d72c7a947c2d5df73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a128702d21b82df2d72c7a947c2d5df73">&#9670;&nbsp;</a></span>no_data_inited_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int terrain_analysis::TerrainAnalysisNode::no_data_inited_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>无数据障碍检测初始化状态 (0:未初始化, 1:已记录起点, 2:已移动足够距离) </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00320">320</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a188b1de409f0fdb662ed72294fa101b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a188b1de409f0fdb662ed72294fa101b0">&#9670;&nbsp;</a></span>no_data_obstacle_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool terrain_analysis::TerrainAnalysisNode::no_data_obstacle_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>是否将无数据区域标记为障碍物 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00288">288</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="a61e79d8604e3154131988c7856e7fdf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61e79d8604e3154131988c7856e7fdf0">&#9670;&nbsp;</a></span>no_decay_dis_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::no_decay_dis_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>无衰减距离 (米)，此范围内的点不受时间衰减影响 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00240">240</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="ad0f515f7ef38df9a514f850ee5f46b02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0f515f7ef38df9a514f850ee5f46b02">&#9670;&nbsp;</a></span>planarPointElev</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;float&gt; terrain_analysis::TerrainAnalysisNode::planarPointElev[<a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a017a54f3b41072670a01732971937a55">kPlanarVoxelNum</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>平面体素点高程向量数组，存储每个体素内所有点的Z值 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00405">405</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a14c728e70837f6114fdf35b357b4946c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14c728e70837f6114fdf35b357b4946c">&#9670;&nbsp;</a></span>planarVoxelDyObs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int terrain_analysis::TerrainAnalysisNode::planarVoxelDyObs[<a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a017a54f3b41072670a01732971937a55">kPlanarVoxelNum</a>] = {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>平面体素动态障碍物计数数组 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00403">403</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a4d2c833dd5b5090e49244f860d411128"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d2c833dd5b5090e49244f860d411128">&#9670;&nbsp;</a></span>planarVoxelEdge</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int terrain_analysis::TerrainAnalysisNode::planarVoxelEdge[<a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a017a54f3b41072670a01732971937a55">kPlanarVoxelNum</a>] = {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>平面体素边缘标记数组，用于无数据障碍检测 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00401">401</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aaf4af545392b76d9ec534504000c8a6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf4af545392b76d9ec534504000c8a6b">&#9670;&nbsp;</a></span>planarVoxelElev</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float terrain_analysis::TerrainAnalysisNode::planarVoxelElev[<a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#a017a54f3b41072670a01732971937a55">kPlanarVoxelNum</a>] = {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>平面体素高程数组，存储每个体素的估计地面高度 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00399">399</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a35760ee0a31e45c55b68479c10360a95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35760ee0a31e45c55b68479c10360a95">&#9670;&nbsp;</a></span>planarVoxelHalfWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr static int terrain_analysis::TerrainAnalysisNode::planarVoxelHalfWidth = (<a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#ae6aa991115f903b17963d7e7691a8244">planarVoxelWidth</a> - 1) / 2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>平面体素网格半宽 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00388">388</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a2ebd1088dad469b287ed15d6af669c17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ebd1088dad469b287ed15d6af669c17">&#9670;&nbsp;</a></span>planarVoxelSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr static float terrain_analysis::TerrainAnalysisNode::planarVoxelSize = 0.2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>平面体素大小 (米) - 用于精细地面高程估计 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00384">384</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ae6aa991115f903b17963d7e7691a8244"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6aa991115f903b17963d7e7691a8244">&#9670;&nbsp;</a></span>planarVoxelWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr static int terrain_analysis::TerrainAnalysisNode::planarVoxelWidth = 51</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>平面体素网格宽度 (体素数) - 51x51网格 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00386">386</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a5352dbf97134c3021e8e25446faaec5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5352dbf97134c3021e8e25446faaec5b">&#9670;&nbsp;</a></span>pub_laser_cloud_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rclcpp::Publisher&lt;sensor_msgs::msg::PointCloud2&gt;::SharedPtr terrain_analysis::TerrainAnalysisNode::pub_laser_cloud_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>地形图发布器 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00436">436</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="ade30fa9c2e9953acbaab33cba574c369"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade30fa9c2e9953acbaab33cba574c369">&#9670;&nbsp;</a></span>quantile_z_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::quantile_z_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>地面高程分位数 (0-1)，用于排序法时选择的分位点 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00252">252</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="aaf892c8002c79330edd7f518fe66b3d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf892c8002c79330edd7f518fe66b3d6">&#9670;&nbsp;</a></span>scan_voxel_size_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::scan_voxel_size_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>扫描体素大小 (米)，用于点云降采样 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00234">234</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="a4e9fb83a8cd4b1e5df4085ca7b07f5e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e9fb83a8cd4b1e5df4085ca7b07f5e1">&#9670;&nbsp;</a></span>sinVehiclePitch</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::sinVehiclePitch</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>预计算的 sin(Pitch)，用于坐标变换优化 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00352">352</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a1be3983521d7d83e72265f254557691f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1be3983521d7d83e72265f254557691f">&#9670;&nbsp;</a></span>sinVehicleRoll</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::sinVehicleRoll</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>预计算的 sin(Roll)，用于坐标变换优化 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00348">348</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aef49184be71906134be21693f4971381"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef49184be71906134be21693f4971381">&#9670;&nbsp;</a></span>sinVehicleYaw</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::sinVehicleYaw</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>预计算的 sin(Yaw)，用于坐标变换优化 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00356">356</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a4f81f5543b7784abad30b3ca9052cbbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f81f5543b7784abad30b3ca9052cbbb">&#9670;&nbsp;</a></span>sub_clearing_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rclcpp::Subscription&lt;std_msgs::msg::Float32&gt;::SharedPtr terrain_analysis::TerrainAnalysisNode::sub_clearing_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>地图清空订阅器 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00434">434</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="af65bf6d78eb407a87856d97888303854"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af65bf6d78eb407a87856d97888303854">&#9670;&nbsp;</a></span>sub_joystick_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rclcpp::Subscription&lt;sensor_msgs::msg::Joy&gt;::SharedPtr terrain_analysis::TerrainAnalysisNode::sub_joystick_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>手柄订阅器 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00432">432</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="a30c7e3cd616e7b42126c75ebc8ddd646"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30c7e3cd616e7b42126c75ebc8ddd646">&#9670;&nbsp;</a></span>sub_laser_cloud_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rclcpp::Subscription&lt;sensor_msgs::msg::PointCloud2&gt;::SharedPtr terrain_analysis::TerrainAnalysisNode::sub_laser_cloud_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>点云订阅器 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00430">430</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="ade3cc1770fa334c730898113715f79c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade3cc1770fa334c730898113715f79c9">&#9670;&nbsp;</a></span>subOdometry_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rclcpp::Subscription&lt;nav_msgs::msg::Odometry&gt;::SharedPtr terrain_analysis::TerrainAnalysisNode::subOdometry_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>里程计订阅器 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00428">428</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="a7e0854bbb6dea58c3318944a820b0942"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e0854bbb6dea58c3318944a820b0942">&#9670;&nbsp;</a></span>system_init_time_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::system_init_time_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>系统初始化时间戳 (秒) </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00326">326</a> 行定义.</p>
+
+</div>
+</div>
+<a id="acb22ba359e5e251cd1ccb78faa9c2f83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb22ba359e5e251cd1ccb78faa9c2f83">&#9670;&nbsp;</a></span>system_inited_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool terrain_analysis::TerrainAnalysisNode::system_inited_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>系统初始化标志 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00317">317</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a632f1a37a4e122f4ff45b070361a0ced"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a632f1a37a4e122f4ff45b070361a0ced">&#9670;&nbsp;</a></span>terrain_voxel_shift_x_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int terrain_analysis::TerrainAnalysisNode::terrain_voxel_shift_x_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>地形体素网格X方向偏移量（体素单位） </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00368">368</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a70f72daddaf80db11e550319c124303d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70f72daddaf80db11e550319c124303d">&#9670;&nbsp;</a></span>terrain_voxel_shift_y_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int terrain_analysis::TerrainAnalysisNode::terrain_voxel_shift_y_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>地形体素网格Y方向偏移量（体素单位） </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00370">370</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a3a748cc03143b7dffaa14d89c4e84d13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a748cc03143b7dffaa14d89c4e84d13">&#9670;&nbsp;</a></span>terrainCloud</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">pcl::PointCloud&lt;pcl::PointXYZI&gt;::Ptr terrain_analysis::TerrainAnalysisNode::terrainCloud</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>地形点云（用于高程计算） </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00416">416</a> 行定义.</p>
+
+</div>
+</div>
+<a id="af035b85ea38e592f68fa637d021e65f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af035b85ea38e592f68fa637d021e65f2">&#9670;&nbsp;</a></span>terrainCloudElev</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">pcl::PointCloud&lt;pcl::PointXYZI&gt;::Ptr terrain_analysis::TerrainAnalysisNode::terrainCloudElev</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>带高程信息的地形点云（最终输出） </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00418">418</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ae938d4e0addd76437373df43863abf73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae938d4e0addd76437373df43863abf73">&#9670;&nbsp;</a></span>terrainVoxelCloud</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">pcl::PointCloud&lt;pcl::PointXYZI&gt;::Ptr terrain_analysis::TerrainAnalysisNode::terrainVoxelCloud[<a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#abba2c78c9f1981615e4d127a471e4c15">kTerrainVoxelNum</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>地形体素点云数组 - 21x21个体素容器 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00420">420</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="aaff336b7c6500a021474704424a2eaba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaff336b7c6500a021474704424a2eaba">&#9670;&nbsp;</a></span>terrainVoxelHalfWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr static int terrain_analysis::TerrainAnalysisNode::terrainVoxelHalfWidth = (<a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#ae19d06d6e859cc07bc92b4578a630a7c">terrainVoxelWidth</a> - 1) / 2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>地形体素网格半宽 - 网格中心到边缘的体素数 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00377">377</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a15627d86bd72b5fc99d9465fbdefdf70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15627d86bd72b5fc99d9465fbdefdf70">&#9670;&nbsp;</a></span>terrainVoxelSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr static float terrain_analysis::TerrainAnalysisNode::terrainVoxelSize = 1.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>地形体素大小 (米) - 每个体素边长1.0米 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00373">373</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a81fc990470cc05f05257856fac66b8d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81fc990470cc05f05257856fac66b8d8">&#9670;&nbsp;</a></span>terrainVoxelUpdateNum</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int terrain_analysis::TerrainAnalysisNode::terrainVoxelUpdateNum[<a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#abba2c78c9f1981615e4d127a471e4c15">kTerrainVoxelNum</a>] = {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>地形体素更新次数数组，记录每个体素累积的点数 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00395">395</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a3528b4aec832a967dd05164bad12af79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3528b4aec832a967dd05164bad12af79">&#9670;&nbsp;</a></span>terrainVoxelUpdateTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float terrain_analysis::TerrainAnalysisNode::terrainVoxelUpdateTime[<a class="el" href="classterrain__analysis_1_1TerrainAnalysisNode.html#abba2c78c9f1981615e4d127a471e4c15">kTerrainVoxelNum</a>] = {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>地形体素更新时间数组，记录每个体素最后更新时间 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00397">397</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ae19d06d6e859cc07bc92b4578a630a7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae19d06d6e859cc07bc92b4578a630a7c">&#9670;&nbsp;</a></span>terrainVoxelWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr static int terrain_analysis::TerrainAnalysisNode::terrainVoxelWidth = 21</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>地形体素网格宽度 (体素数) - 21x21网格 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00375">375</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a0a5c9aac929f4ec14d24f45cf0ee3af7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a5c9aac929f4ec14d24f45cf0ee3af7">&#9670;&nbsp;</a></span>timer_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rclcpp::TimerBase::SharedPtr terrain_analysis::TerrainAnalysisNode::timer_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>主处理定时器 (100Hz) </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00438">438</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="aaad9ad2f95097b8bda7e1fb3030a19cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaad9ad2f95097b8bda7e1fb3030a19cf">&#9670;&nbsp;</a></span>use_sorting_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool terrain_analysis::TerrainAnalysisNode::use_sorting_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>是否使用排序法估计地面高程（false则使用最小值法） </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00249">249</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="af23b0a32e8be7b159bba480fd365037e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af23b0a32e8be7b159bba480fd365037e">&#9670;&nbsp;</a></span>vehicle_height_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::vehicle_height_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>车辆高度 (米)，用于确定可通行性判断范围 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00297">297</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="a23a911b171c515367e8eb968a1a1cde2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23a911b171c515367e8eb968a1a1cde2">&#9670;&nbsp;</a></span>vehiclePitch</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::vehiclePitch</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>机器人姿态 - 俯仰角 Pitch (弧度) </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00343">343</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a8426dedbae0d2a1553470332f0cd2604"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8426dedbae0d2a1553470332f0cd2604">&#9670;&nbsp;</a></span>vehicleRoll</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::vehicleRoll</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>机器人姿态 - 横滚角 Roll (弧度) </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00341">341</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a410645727647a891fed6dc1cbf56d544"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a410645727647a891fed6dc1cbf56d544">&#9670;&nbsp;</a></span>vehicleX</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::vehicleX</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>机器人位置 - X坐标 (米) </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00334">334</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ae9f3f193ff5dba4700ed6b14c69d60d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9f3f193ff5dba4700ed6b14c69d60d2">&#9670;&nbsp;</a></span>vehicleXRec</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::vehicleXRec</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>记录的机器人X坐标，用于无数据障碍检测 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00361">361</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a9f05901fcd8a5d6b68935d3deba9bf5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f05901fcd8a5d6b68935d3deba9bf5a">&#9670;&nbsp;</a></span>vehicleY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::vehicleY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>机器人位置 - Y坐标 (米) </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00336">336</a> 行定义.</p>
+
+</div>
+</div>
+<a id="adc30fbef96d4856e7f7fee0c75f580f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc30fbef96d4856e7f7fee0c75f580f4">&#9670;&nbsp;</a></span>vehicleYaw</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::vehicleYaw</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>机器人姿态 - 偏航角 Yaw (弧度) </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00345">345</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a573f6a0c3d50254c53ff13b2470799f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a573f6a0c3d50254c53ff13b2470799f4">&#9670;&nbsp;</a></span>vehicleYRec</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::vehicleYRec</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>记录的机器人Y坐标，用于无数据障碍检测 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00363">363</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a4328c24e72087a44c4213fe49794a77b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4328c24e72087a44c4213fe49794a77b">&#9670;&nbsp;</a></span>vehicleZ</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::vehicleZ</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>机器人位置 - Z坐标 (米) </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00338">338</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a9f17a8ed10e0366603da69e43ae4176e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f17a8ed10e0366603da69e43ae4176e">&#9670;&nbsp;</a></span>voxel_point_update_thre_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int terrain_analysis::TerrainAnalysisNode::voxel_point_update_thre_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>体素点数更新阈值，达到此值触发降采样 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00300">300</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<a id="a71fbe8217b6629168b5c0bbdfb74a714"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71fbe8217b6629168b5c0bbdfb74a714">&#9670;&nbsp;</a></span>voxel_time_update_thre_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double terrain_analysis::TerrainAnalysisNode::voxel_time_update_thre_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>体素时间更新阈值 (秒)，超过此时间强制更新 </p>
+
+<p class="definition">在文件 <a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a> 第 <a class="el" href="terrain__analysis__new_8hpp_source.html#l00303">303</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="terrain__analysis__new_8cpp_source.html#l00020">TerrainAnalysisNode()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>/home/tfhgn/nav2_ws/src/pb2025_sentry_nav/terrain_analysis/include/<a class="el" href="terrain__analysis__new_8hpp_source.html">terrain_analysis_new.hpp</a></li>
+<li>/home/tfhgn/nav2_ws/src/pb2025_sentry_nav/terrain_analysis/src/<a class="el" href="terrain__analysis__new_8cpp_source.html">terrain_analysis_new.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2025年 十一月 10日 星期一 20:39:15 , 为 Terrain Analysis使用 &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

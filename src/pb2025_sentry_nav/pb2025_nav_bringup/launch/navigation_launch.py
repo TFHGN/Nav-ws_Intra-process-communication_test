@@ -114,17 +114,6 @@ def generate_launch_description():
         "log_level", default_value="info", description="log level"
     )
 
-    start_terrain_analysis_cmd = Node(
-        package="terrain_analysis",
-        executable="terrainAnalysis",
-        name="terrain_analysis",
-        output="screen",
-        respawn=use_respawn,
-        respawn_delay=2.0,
-        arguments=["--ros-args", "--log-level", log_level],
-        parameters=[configured_params],
-    )
-
     start_terrain_analysis_ext_cmd = Node(
         package="terrain_analysis_ext",
         executable="terrainAnalysisExt",
@@ -139,6 +128,16 @@ def generate_launch_description():
     load_nodes = GroupAction(
         condition=IfCondition(PythonExpression(["not ", use_composition])),
         actions=[
+            Node(
+                package="terrain_analysis",
+                executable="terrainAnalysis",
+                name="terrain_analysis",
+                output="screen",
+                respawn=use_respawn,
+                respawn_delay=2.0,
+                parameters=[configured_params],
+                arguments=["--ros-args", "--log-level", log_level],
+            ),
             Node(
                 package="loam_interface",
                 executable="loam_interface_node",
@@ -267,6 +266,13 @@ def generate_launch_description():
         target_container=container_name_full,
         composable_node_descriptions=[
             ComposableNode(
+                package="terrain_analysis",
+                plugin="terrain_analysis::TerrainAnalysisNode",
+                name="terrain_analysis",
+                parameters=[configured_params],
+                extra_arguments=[{'use_intra_process_comms': True}],
+            ),
+            ComposableNode(
                 package="loam_interface",
                 plugin="loam_interface::LoamInterfaceNode",
                 name="loam_interface",
@@ -372,7 +378,6 @@ def generate_launch_description():
     ld.add_action(declare_use_respawn_cmd)
     ld.add_action(declare_log_level_cmd)
     # Add the actions to launch all of the navigation nodes
-    ld.add_action(start_terrain_analysis_cmd)
     ld.add_action(start_terrain_analysis_ext_cmd)
     ld.add_action(load_nodes)
     ld.add_action(load_composable_nodes)

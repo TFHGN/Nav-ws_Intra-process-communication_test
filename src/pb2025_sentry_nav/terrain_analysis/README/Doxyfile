@@ -33,7 +33,7 @@ MULTILINE_CPP_IS_BRIEF = NO
 # 输入文件配置 Input Settings
 #---------------------------------------------------------------------------
 
-INPUT                  = src/ include/
+INPUT                  = ../src/ ../include/
 FILE_PATTERNS          = *.cpp *.hpp *.h
 RECURSIVE              = YES
 EXCLUDE                = 

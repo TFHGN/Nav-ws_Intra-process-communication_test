@@ -1,0 +1,4 @@
+<map id="terrain_analysis::TerrainAnalysisNode" name="terrain_analysis::TerrainAnalysisNode">
+<area shape="rect" id="node1" title="地形分析节点类 &#45; 用于实时地形评估和可通行性分析" alt="" coords="5,131,168,560"/>
+<area shape="rect" id="node2" title=" " alt="" coords="39,5,135,83"/>
+</map>
