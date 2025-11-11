@@ -61,43 +61,43 @@ TerrainAnalysisExtNode::TerrainAnalysisExtNode(const rclcpp::NodeOptions &option
 	terrain_cloud_elev_(new pcl::PointCloud<pcl::PointXYZI>()),
 	terrain_cloud_local_(new pcl::PointCloud<pcl::PointXYZI>())
 {
-	// Declare parameters with legacy camelCase names to remain compatible
-	this->declare_parameter<double>("scanVoxelSize", scan_voxel_size_);
-	this->declare_parameter<double>("decayTime", decay_time_);
-	this->declare_parameter<double>("noDecayDis", no_decay_dis_);
-	this->declare_parameter<double>("clearingDis", clearing_dis_);
-	this->declare_parameter<bool>("useSorting", use_sorting_);
-	this->declare_parameter<double>("quantileZ", quantile_z_);
-	this->declare_parameter<double>("vehicleHeight", vehicle_height_);
-	this->declare_parameter<int>("voxelPointUpdateThre", voxel_point_update_thre_);
-	this->declare_parameter<double>("voxelTimeUpdateThre", voxel_time_update_thre_);
-	this->declare_parameter<double>("lowerBoundZ", lower_bound_z_);
-	this->declare_parameter<double>("upperBoundZ", upper_bound_z_);
-	this->declare_parameter<double>("disRatioZ", dis_ratio_z_);
-	this->declare_parameter<bool>("checkTerrainConn", check_terrain_conn_);
-	this->declare_parameter<double>("terrainUnderVehicle", terrain_under_vehicle_);
-	this->declare_parameter<double>("terrainConnThre", terrain_conn_thre_);
-	this->declare_parameter<double>("ceilingFilteringThre", ceiling_filtering_thre_);
-	this->declare_parameter<double>("localTerrainMapRadius", local_terrain_map_radius_);
+	// Declare parameters with snake_case naming to match terrain_analysis style
+	this->declare_parameter<double>("scan_voxel_size", scan_voxel_size_);
+	this->declare_parameter<double>("decay_time", decay_time_);
+	this->declare_parameter<double>("no_decay_dis", no_decay_dis_);
+	this->declare_parameter<double>("clearing_dis", clearing_dis_);
+	this->declare_parameter<bool>("use_sorting", use_sorting_);
+	this->declare_parameter<double>("quantile_z", quantile_z_);
+	this->declare_parameter<double>("vehicle_height", vehicle_height_);
+	this->declare_parameter<int>("voxel_point_update_thre", voxel_point_update_thre_);
+	this->declare_parameter<double>("voxel_time_update_thre", voxel_time_update_thre_);
+	this->declare_parameter<double>("lower_bound_z", lower_bound_z_);
+	this->declare_parameter<double>("upper_bound_z", upper_bound_z_);
+	this->declare_parameter<double>("dis_ratio_z", dis_ratio_z_);
+	this->declare_parameter<bool>("check_terrain_conn", check_terrain_conn_);
+	this->declare_parameter<double>("terrain_under_vehicle", terrain_under_vehicle_);
+	this->declare_parameter<double>("terrain_conn_thre", terrain_conn_thre_);
+	this->declare_parameter<double>("ceiling_filtering_thre", ceiling_filtering_thre_);
+	this->declare_parameter<double>("local_terrain_map_radius", local_terrain_map_radius_);
 
 	// Load parameters
-	this->get_parameter("scanVoxelSize", scan_voxel_size_);
-	this->get_parameter("decayTime", decay_time_);
-	this->get_parameter("noDecayDis", no_decay_dis_);
-	this->get_parameter("clearingDis", clearing_dis_);
-	this->get_parameter("useSorting", use_sorting_);
-	this->get_parameter("quantileZ", quantile_z_);
-	this->get_parameter("vehicleHeight", vehicle_height_);
-	this->get_parameter("voxelPointUpdateThre", voxel_point_update_thre_);
-	this->get_parameter("voxelTimeUpdateThre", voxel_time_update_thre_);
-	this->get_parameter("lowerBoundZ", lower_bound_z_);
-	this->get_parameter("upperBoundZ", upper_bound_z_);
-	this->get_parameter("disRatioZ", dis_ratio_z_);
-	this->get_parameter("checkTerrainConn", check_terrain_conn_);
-	this->get_parameter("terrainUnderVehicle", terrain_under_vehicle_);
-	this->get_parameter("terrainConnThre", terrain_conn_thre_);
-	this->get_parameter("ceilingFilteringThre", ceiling_filtering_thre_);
-	this->get_parameter("localTerrainMapRadius", local_terrain_map_radius_);
+	this->get_parameter("scan_voxel_size", scan_voxel_size_);
+	this->get_parameter("decay_time", decay_time_);
+	this->get_parameter("no_decay_dis", no_decay_dis_);
+	this->get_parameter("clearing_dis", clearing_dis_);
+	this->get_parameter("use_sorting", use_sorting_);
+	this->get_parameter("quantile_z", quantile_z_);
+	this->get_parameter("vehicle_height", vehicle_height_);
+	this->get_parameter("voxel_point_update_thre", voxel_point_update_thre_);
+	this->get_parameter("voxel_time_update_thre", voxel_time_update_thre_);
+	this->get_parameter("lower_bound_z", lower_bound_z_);
+	this->get_parameter("upper_bound_z", upper_bound_z_);
+	this->get_parameter("dis_ratio_z", dis_ratio_z_);
+	this->get_parameter("check_terrain_conn", check_terrain_conn_);
+	this->get_parameter("terrain_under_vehicle", terrain_under_vehicle_);
+	this->get_parameter("terrain_conn_thre", terrain_conn_thre_);
+	this->get_parameter("ceiling_filtering_thre", ceiling_filtering_thre_);
+	this->get_parameter("local_terrain_map_radius", local_terrain_map_radius_);
 
 	RCLCPP_INFO(get_logger(), "terrain_analysis_ext parameters loaded.");
 
