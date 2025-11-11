@@ -121,7 +121,7 @@ def generate_launch_description():
         actions=[
             Node(                                                   #有隐患，无实际节点
                 package="terrain_analysis",
-                executable="terrainAnalysis",
+                executable="terrain_analysis_node",
                 name="terrain_analysis",
                 output="screen",
                 respawn=use_respawn,
@@ -138,6 +138,16 @@ def generate_launch_description():
                 respawn_delay=2.0,
                 arguments=["--ros-args", "--log-level", log_level],
                 parameters=[configured_params],
+            ),
+            Node(
+                package="terrain_analysis_ext",
+                executable="terrain_analysis_ext_node",
+                name="terrain_analysis_ext",
+                output="screen",
+                respawn=use_respawn,
+                respawn_delay=2.0,
+                parameters=[configured_params],
+                arguments=["--ros-args", "--log-level", log_level],
             ),
             Node(
                 package="loam_interface",
