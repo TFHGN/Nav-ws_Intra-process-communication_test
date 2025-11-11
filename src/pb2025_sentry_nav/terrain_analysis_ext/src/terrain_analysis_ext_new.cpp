@@ -136,11 +136,6 @@ TerrainAnalysisExtNode::TerrainAnalysisExtNode(const rclcpp::NodeOptions &option
 		rclcpp::QoS(2),
 		std::bind(&TerrainAnalysisExtNode::terrainCloudLocalHandler, this, std::placeholders::_1));
 
-	sub_joystick_ = this->create_subscription<sensor_msgs::msg::Joy>(
-		"joy",
-		rclcpp::QoS(5),
-		std::bind(&TerrainAnalysisExtNode::joystickHandler, this, std::placeholders::_1));
-
 	sub_clearing_ = this->create_subscription<std_msgs::msg::Float32>(
 		"cloud_clearing",
 		rclcpp::QoS(5),
@@ -211,13 +206,6 @@ void TerrainAnalysisExtNode::terrainCloudLocalHandler(const sensor_msgs::msg::Po
 {
 	terrain_cloud_local_->clear();
 	pcl::fromROSMsg(*terrain_cloud_msg, *terrain_cloud_local_);
-}
-
-void TerrainAnalysisExtNode::joystickHandler(const sensor_msgs::msg::Joy::ConstSharedPtr joy)
-{
-	if (!joy->buttons.empty() && joy->buttons[5] > 0.5) {
-		clearing_cloud_ = true;
-	}
 }
 
 void TerrainAnalysisExtNode::clearingHandler(const std_msgs::msg::Float32::ConstSharedPtr distance)

@@ -13,9 +13,6 @@
 [submodule "livox_ros_driver2"]
 	path = livox_ros_driver2
 	url = https://github.com/LemperorD/livox_ros_driver2.git
-[submodule "pb_teleop_twist_joy"]
-	path = pb_teleop_twist_joy
-	url = https://github.com/LemperorD/pb_teleop_twist_joy.git
 [submodule "point_lio"]
 	path = point_lio
 	url = https://github.com/LemperorD/point_lio.git

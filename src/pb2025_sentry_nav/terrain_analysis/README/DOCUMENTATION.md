@@ -33,7 +33,6 @@
 **已注释的回调函数：**
 - `odometryHandler()` - 里程计处理
 - `laserCloudHandler()` - 点云处理
-- `joystickHandler()` - 手柄控制
 - `clearingHandler()` - 地图清空
 - `timerCallback()` - 主处理循环
 

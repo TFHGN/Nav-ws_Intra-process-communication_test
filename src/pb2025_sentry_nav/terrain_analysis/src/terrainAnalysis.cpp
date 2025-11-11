@@ -22,7 +22,6 @@
 #include "pcl/point_types.h"
 #include "pcl_conversions/pcl_conversions.h"
 #include "rclcpp/rclcpp.hpp"
-#include "sensor_msgs/msg/joy.hpp"
 #include "sensor_msgs/msg/point_cloud2.hpp"
 #include "std_msgs/msg/float32.hpp"
 #include "tf2_geometry_msgs/tf2_geometry_msgs.hpp"
@@ -178,14 +177,6 @@ void laserCloudHandler(
   newlaserCloud = true;
 }
 
-// joystick callback function
-void joystickHandler(const sensor_msgs::msg::Joy::ConstSharedPtr joy) {
-  if (joy->buttons[5] > 0.5) {
-    noDataInited = 0;
-    clearingCloud = true;
-  }
-}
-
 // cloud clearing callback function
 void clearingHandler(const std_msgs::msg::Float32::ConstSharedPtr dis) {
   noDataInited = 0;
@@ -256,9 +247,6 @@ int main(int argc, char **argv) {
 
   auto subLaserCloud = nh->create_subscription<sensor_msgs::msg::PointCloud2>(
       "registered_scan", 5, laserCloudHandler);
-
-  auto subJoystick =
-      nh->create_subscription<sensor_msgs::msg::Joy>("joy", 5, joystickHandler);
 
   auto subClearing = nh->create_subscription<std_msgs::msg::Float32>(
       "map_clearing", 5, clearingHandler);

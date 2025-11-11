@@ -28,7 +28,6 @@
 #include "pcl/point_types.h"
 #include "pcl_conversions/pcl_conversions.h"
 #include "rclcpp/rclcpp.hpp"
-#include "sensor_msgs/msg/joy.hpp"
 #include "sensor_msgs/msg/point_cloud2.hpp"
 #include "std_msgs/msg/float32.hpp"
 #include "tf2_geometry_msgs/tf2_geometry_msgs.hpp"
@@ -69,7 +68,6 @@ private:
   void terrainCloudLocalHandler(const sensor_msgs::msg::PointCloud2::ConstSharedPtr terrain_cloud_msg);
 
   /// @brief 手柄回调 - 触发地图清空
-  void joystickHandler(const sensor_msgs::msg::Joy::ConstSharedPtr joy);
 
   /// @brief 清空距离回调 - 更新清空半径并触发清空
   void clearingHandler(const std_msgs::msg::Float32::ConstSharedPtr distance);
@@ -149,7 +147,6 @@ private:
   rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr sub_odometry_;
   rclcpp::Subscription<sensor_msgs::msg::PointCloud2>::SharedPtr sub_laser_cloud_;
   rclcpp::Subscription<sensor_msgs::msg::PointCloud2>::SharedPtr sub_terrain_cloud_local_;
-  rclcpp::Subscription<sensor_msgs::msg::Joy>::SharedPtr sub_joystick_;
   rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr sub_clearing_;
   rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pub_terrain_cloud_;
   rclcpp::TimerBase::SharedPtr timer_;

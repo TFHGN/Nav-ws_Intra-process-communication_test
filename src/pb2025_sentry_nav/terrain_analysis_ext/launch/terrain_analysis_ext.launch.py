@@ -233,7 +233,6 @@ def generate_launch_description():
                 ("registered_scan", "registered_scan"),
                 ("terrain_map", "terrain_map"),
                 ("terrain_map_ext", "terrain_map_ext"),
-                ("joy", "joy"),
                 ("cloud_clearing", "cloud_clearing"),
             ],
         )

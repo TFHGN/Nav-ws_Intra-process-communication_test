@@ -284,7 +284,6 @@ def generate_launch_description():
             remappings=[
                 ('lidar_odometry', 'lidar_odometry'),
                 ('registered_scan', 'registered_scan'),
-                ('joy', 'joy'),
                 ('map_clearing', 'map_clearing'),
                 ('terrain_map', 'terrain_map'),
             ]
