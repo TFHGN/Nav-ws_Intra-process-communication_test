@@ -48,7 +48,6 @@ https://github.com/user-attachments/assets/ae4c19a0-4c73-46a0-95bd-909734da2a42
     ├── ign_sim_pointcloud_tool             # 仿真器点云处理工具
     ├── livox_ros_driver2                   # Livox 驱动
     ├── loam_interface                      # point_lio 等里程计算法接口
-    ├── pb_teleop_twist_joy                 # 手柄控制
     ├── pb2025_nav_bringup                  # 启动文件
     ├── pb2025_sentry_nav                   # 本仓库功能包描述文件
     ├── pb_omni_pid_pursuit_controller      # 路径跟踪控制器
@@ -223,9 +222,3 @@ use_robot_state_pub:=True
 
 > [!TIP]
 > 关于本项目更多细节与实车部署指南，请前往 [Wiki](https://github.com/SMBU-PolarBear-Robotics-Team/pb2025_sentry_nav/wiki)
-
-### 2.5 手柄控制
-
-默认情况下，PS4 手柄控制已开启。键位映射关系详见 [nav2_params.yaml](./pb2025_nav_bringup/config/simulation/nav2_params.yaml) 中的 `teleop_twist_joy_node` 部分。
-
-![teleop_twist_joy.gif](https://raw.githubusercontent.com/LihanChen2004/picx-images-hosting/master/teleop_twist_joy.5j4aav3v3p.gif)

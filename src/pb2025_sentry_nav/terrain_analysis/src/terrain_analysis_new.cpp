@@ -166,15 +166,6 @@ TerrainAnalysisNode::TerrainAnalysisNode(const rclcpp::NodeOptions &options)
             this->laserCloudHandler(laserCloud2);
           });
 
-  sub_joystick_ =
-      this->create_subscription<sensor_msgs::msg::Joy>(
-          "joy",
-          5,
-          [this](const sensor_msgs::msg::Joy::ConstSharedPtr joy) -> void
-          {
-            this->joystickHandler(joy);
-          });
-
   sub_clearing_ =
       this->create_subscription<std_msgs::msg::Float32>(
           "map_clearing",
@@ -276,16 +267,6 @@ void TerrainAnalysisNode::laserCloudHandler(
 
   new_laser_cloud_ = true;
 }
-
-void TerrainAnalysisNode::joystickHandler(
-    const sensor_msgs::msg::Joy::ConstSharedPtr joy)
-{
-  if (joy->buttons[5] > 0.5)
-  {
-    no_data_inited_ = 0;
-    clearing_cloud_ = true;
-  }
-    }
 
 void TerrainAnalysisNode::clearingHandler(const std_msgs::msg::Float32::ConstSharedPtr dis)
 {
@@ -775,7 +756,7 @@ void TerrainAnalysisNode::timerCallback()
     pub_laser_cloud_->publish(terrainCloud2);
   }
     }
-}
+} // namespace terrain_analysis
 
 #include "rclcpp_components/register_node_macro.hpp"
 RCLCPP_COMPONENTS_REGISTER_NODE(terrain_analysis::TerrainAnalysisNode)

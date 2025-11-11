@@ -44,7 +44,6 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "nav_msgs/msg/odometry.hpp"
-#include "sensor_msgs/msg/joy.hpp"
 #include "sensor_msgs/msg/point_cloud2.hpp"
 #include "std_msgs/msg/float32.hpp"
 #include "tf2_geometry_msgs/tf2_geometry_msgs.hpp"
@@ -91,22 +90,18 @@ public:
   /**
    * @brief 构造函数 - 初始化地形分析节点
    * 
-   * @param options ROS2 节点选项，用于配置节点行为
+   * @param options ROS2 节点选项,用于配置节点行为
    * 
    * @details
-   * 构造函数执行以下初始化步骤：
-   * 1. **参数声明与加载**：声明并读取所有配置参数
-   * 2. **体素网格初始化**：创建地形体素云数组
-   * 3. **订阅器创建**：
-   *    - lidar_odometry：接收机器人位姿
-   *    - registered_scan：接收配准后的点云
-   *    - joy：接收手柄清空指令
-   *    - map_clearing：接收地图清空指令
-   * 4. **发布器创建**：terrain_map - 发布带高程的地形图
-   * 5. **定时器创建**：100Hz 主处理循环
-   * 
-   * @note 使用 SensorDataQoS 以支持高频传感器数据
-   * @warning 构造函数设计为非阻塞，适配组件容器环境
+   * 构造函数执行以下初始化步骤:
+   * 1. **参数声明与加载**:声明并读取所有配置参数
+   * 2. **体素网格初始化**:创建地形体素云数组
+   * 3. **订阅器创建**:
+   *    - lidar_odometry:接收机器人位姿
+   *    - registered_scan:接收配准后的点云
+   *    - map_clearing:接收地图清空指令
+   * 4. **发布器创建**:terrain_map - 发布带高程的地形图
+   * 5. **定时器创建**:100Hz 主处理循环
    */
   explicit TerrainAnalysisNode(const rclcpp::NodeOptions &options = rclcpp::NodeOptions());
 
@@ -149,20 +144,6 @@ private:
    * @note 采用动态高度范围（与距离成正比）以适应地形起伏
    */
   void laserCloudHandler(const sensor_msgs::msg::PointCloud2::ConstSharedPtr laserCloud2);
-
-  /**
-   * @brief 手柄回调函数 - 处理手动清空地图指令
-   * 
-   * @param joy 手柄消息
-   * 
-   * @details
-   * 监听手柄的按钮5（索引5），按下时触发地图清空：
-   * - 重置无数据障碍检测状态 (no_data_inited_ = 0)
-   * - 设置清空标志 (clearing_cloud_ = true)
-   * 
-   * @note 通常用于调试或重置场景
-   */
-  void joystickHandler(const sensor_msgs::msg::Joy::ConstSharedPtr joy);
 
   /**
    * @brief 地图清空回调函数 - 处理自动清空指令
@@ -429,15 +410,14 @@ private:
   /// @brief 点云订阅器
   rclcpp::Subscription<sensor_msgs::msg::PointCloud2>::SharedPtr sub_laser_cloud_;
   /// @brief 手柄订阅器
-  rclcpp::Subscription<sensor_msgs::msg::Joy>::SharedPtr sub_joystick_;
   /// @brief 地图清空订阅器
   rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr sub_clearing_;
   /// @brief 地形图发布器
   rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pub_laser_cloud_;
   /// @brief 主处理定时器 (100Hz)
   rclcpp::TimerBase::SharedPtr timer_;
-};
+};  // class TerrainAnalysisNode
 
-} // namespace terrain_analysis
+}  // namespace terrain_analysis
 
 #endif  // TERRAIN_ANALYSIS__TERRAIN_ANALYSIS_NEW_HPP_

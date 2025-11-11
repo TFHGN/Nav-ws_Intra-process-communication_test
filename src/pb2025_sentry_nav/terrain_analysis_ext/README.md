@@ -15,7 +15,6 @@
 | `lidar_odometry` | 订阅 | 里程计位姿 |
 | `terrain_map` | 订阅 | 局部地形图融合输入 |
 | `cloud_clearing` | 订阅 | 清空半径指令 |
-| `joy` | 订阅 | 手动清空指令 |
 | `terrain_map_ext` | 发布 | 含高程信息的拓展地形输出 |
 
 ## 示例
