@@ -94,7 +94,7 @@ def generate_launch_description():
 
     declare_use_composition_cmd = DeclareLaunchArgument(
         "use_composition",
-        default_value="true",
+        default_value="false",
         description="Use composed bringup if True",
     )
 
@@ -276,20 +276,6 @@ def generate_launch_description():
         condition=IfCondition(use_composition),
         target_container=container_name_full,
         composable_node_descriptions=[
-            ComposableNode(
-                package="terrain_analysis",
-                plugin="terrain_analysis::TerrainAnalysisNode",
-                name="terrain_analysis",
-                parameters=[configured_params],
-                extra_arguments=[{'use_intra_process_comms': True}],
-            ),
-            ComposableNode(
-                package="terrain_analysis_ext",
-                plugin="terrain_analysis::TerrainAnalysisExtNode",
-                name="terrain_analysis_ext",
-                parameters=[configured_params],
-                extra_arguments=[{'use_intra_process_comms': True}],
-            ),
             ComposableNode(
                 package="loam_interface",
                 plugin="loam_interface::LoamInterfaceNode",
